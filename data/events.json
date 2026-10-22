@@ -1,0 +1,30 @@
+[
+  { "id": "weather-typhoon", "trigger": "slot", "weight": 3, "conditions": { "months": [7, 8, 9] },
+    "text": "태풍 영향으로 촬영이 어려워졌다.",
+    "choices": [
+      { "label": "강행", "effects": { "stamina": -10, "W": -0.15 } },
+      { "label": "실내 대체", "effects": { "cost": 50000, "W": 0.0 } } ] },
+  { "id": "weather-rain", "trigger": "slot", "weight": 4, "conditions": {},
+    "text": "비가 내린다. 야외 촬영 화면이 칙칙하다.",
+    "choices": [
+      { "label": "그대로 촬영", "effects": { "W": -0.08 } },
+      { "label": "우비 구입·분위기 살리기", "effects": { "cost": 20000, "W": 0.02 } } ] },
+  { "id": "strike-airline", "trigger": "transport", "weight": 2, "conditions": { "modes": ["lcc", "fsc"] },
+    "text": "항공사 파업으로 결항 소식이 들려온다.",
+    "choices": [
+      { "label": "대체편 구매", "effects": { "cost": 200000 } },
+      { "label": "하루 대기", "effects": { "days": 1, "stamina": -5 } } ] },
+  { "id": "local-friend", "trigger": "slot", "weight": 2, "conditions": {},
+    "text": "현지에서 친절한 사람을 만나 숨은 명소를 소개받았다.",
+    "choices": [ { "label": "함께 촬영", "effects": { "W": 0.12, "rep": 1 } } ] },
+  { "id": "hate-comment", "trigger": "upload", "weight": 3, "conditions": {},
+    "text": "악플이 달렸다.",
+    "choices": [
+      { "label": "무시", "effects": { "rep": -2 } },
+      { "label": "해명 댓글·영상", "effects": { "cost": 0, "days": 1, "rep": 1 } } ] },
+  { "id": "health-warning", "trigger": "slot", "weight": 5, "conditions": { "maxStamina": 30 },
+    "text": "몸이 한계다. 쉬지 않으면 번아웃이 올 수 있다.",
+    "choices": [
+      { "label": "일정 중 휴식", "effects": { "stamina": 10, "W": -0.05 } },
+      { "label": "강행", "effects": { "stamina": -5 } } ] }
+]

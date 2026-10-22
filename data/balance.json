@@ -1,0 +1,34 @@
+{
+  "_note": "초기값. 설계서 v0.2 기준. 핵심 수치 변경은 사용자 승인 후 반영.",
+  "start": { "subs": 1000, "cash": 3000000, "stamina": 100, "shootLv": 1, "editLv": 1, "reputation": 50 },
+  "win": { "subs": 1000000 },
+  "reach": { "min": 0.10, "max": 0.30 },
+  "discovery": { "perQ": 1500 },
+  "quality": { "base": 0.5, "span": 1.5, "wC": 0.40, "wS": 0.25, "wE": 0.25, "wW": 0.10, "min": 0.5, "max": 2.0 },
+  "content": { "wPoints": 0.55, "wFill": 0.25, "wDiversity": 0.20, "pointsRef": 9 },
+  "edit": { "maxDays": 3, "base": 0.6, "perDay": 0.4 },
+  "viral": { "chance": 0.05, "mult": 10 },
+  "trend": { "min": 0.8, "max": 1.5, "offSeason": -0.15, "onSeason": 0.05 },
+  "popularity": { "min": 0.6, "max": 1.8 },
+  "conversion": 0.012,
+  "titleStyles": {
+    "info":    { "mult": 1.0, "rep": 1 },
+    "emotion": { "mult": 1.1, "rep": 0 },
+    "bait":    { "mult": 1.4, "rep": -3 }
+  },
+  "lapse": { "afterDays": 30, "weeklyLoss": 0.01 },
+  "cpm": 2000,
+  "sponsor": {
+    "minSubs": 10000, "base": 500000, "perLog10": 1500000, "max": 5000000,
+    "probDivisor": 400000, "maxProb": 0.5, "penaltyRep": 10, "penaltyRate": 0.3, "dueDays": 60
+  },
+  "priceLevelMult": [0.6, 0.85, 1.0, 1.4, 1.9],
+  "foodPerDay": 30000,
+  "lodgingRecover": { "guesthouse": 8, "business": 15, "hotel": 25 },
+  "stamina": { "max": 100, "restDay": 25, "editDay": 10, "warn": 30 },
+  "travel": { "shortMin": 360, "midMin": 720, "midDays": 1, "longDays": 2 },
+  "rental": { "bonusSlotsPerTwoDays": 1 },
+  "skill": { "maxLv": 10, "xpPerLevel": 100, "trainCostPerLevel": 50000, "xpPerSlot": 8, "trainXp": 100 },
+  "loan": { "base": 3000000, "perSub": 100, "monthlyRate": 0.02, "intervalDays": 30 },
+  "events": { "slotChance": 0.12, "uploadChance": 0.10 }
+}
