@@ -3,7 +3,7 @@ import { makeRng } from './rng.js';
 import { evaluatePlan } from './trip.js';
 import { pay, earn, advanceDays, canAfford, monthOf, loanLimit } from './economy.js';
 import { pickEvent, sumEffects } from './events.js';
-import { contentScore, editScore, quality, trendMult, computeViews, noveltyMult, computeSubGain, adRevenue,
+import { contentScore, editScore, quality, trendMult, computeViews, noveltyMult, distanceMult, computeSubGain, adRevenue,
   sponsorChance, sponsorAmount, clamp } from './views.js';
 
 const levelUp = (lv, xp, bal) => {
@@ -80,7 +80,8 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
   const firstVisit = !s.visited.includes(dest.id);
   const trn = dest.transports.find((x) => x.mode === plan.transport);
   const N = noveltyMult(trn?.durationMin ?? 0, firstVisit, bal);
-  const views = computeViews({ subs: s.subs, rep: s.reputation, Q, P: dest.popularity, T, viral, N }, bal);
+  const Dm = distanceMult(trn?.durationMin ?? 0, dest.region, bal);
+  const views = computeViews({ subs: s.subs, rep: s.reputation, Q, P: dest.popularity, T, viral, N, Dm }, bal);
   const subGain = computeSubGain(views, Q, style, bal);
   const ad = adRevenue(views, bal);
   const st = bal.titleStyles[style] ?? bal.titleStyles.info;

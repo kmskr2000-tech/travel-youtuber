@@ -60,7 +60,7 @@ const POLICIES = {
 function run(policyName, seed) {
   const rng = makeRng(seed ^ 0x9e3779b9);
   let s = newState(bal, seed);
-  let v = 0, stuck = 0;
+  let v = 0, stuck = 0; const ms = {};
   while (!s.over && !s.ended && v < MAXV) {
     const p = POLICIES[policyName](s);
     if (s.stamina < p.restBelow) { s = rest(s, Math.ceil((90 - s.stamina) / bal.stamina.restDay), bal); }
@@ -83,8 +83,9 @@ function run(policyName, seed) {
     stuck = 0;
     ({ state: s } = resolveTrip(s, dest, plan, { editDays: p.edit, style: p.style, choose: () => 0 }, data, bal));
     v++;
+    for (const m of [10000, 100000, 1000000]) if (!ms[m] && s.subs >= m) ms[m] = { v, day: s.day };
   }
-  return { s, v, outcome: s.ended ? 'win' : s.over ? s.over.type : stuck > 3 ? 'stuck' : 'timeout' };
+  return { s, v, ms, outcome: s.ended ? 'win' : s.over ? s.over.type : stuck > 3 ? 'stuck' : 'timeout' };
 }
 
 const pct = (a, q) => { const b = [...a].sort((x, y) => x - y); return b.length ? b[Math.min(b.length - 1, Math.floor(q * b.length))] : null; };
@@ -97,6 +98,7 @@ for (const name of Object.keys(POLICIES)) {
   console.log(`\n[${name}] 결과: ${JSON.stringify(cnt)}`);
   console.log(`  편수 p50=${pct(vids, .5)} p90=${pct(vids, .9)} | 최종구독자 p10=${pct(subs, .1)} p50=${pct(subs, .5)} p90=${pct(subs, .9)}`);
   if (wins.length) console.log(`  달성 편수 p50=${pct(wins.map((r) => r.v), .5)} 일수 p50=${pct(wins.map((r) => r.s.day), .5)} (${(pct(wins.map((r) => r.s.day), .5) / 365).toFixed(1)}년)`);
+  for (const m of [10000, 100000, 1000000]) { const hit = res.filter((r) => r.ms[m]); if (hit.length) console.log(`  ${m / 10000}만 도달 ${hit.length}/${res.length}: 편수 p50=${pct(hit.map((r) => r.ms[m].v), .5)} 일수 p50=${pct(hit.map((r) => r.ms[m].day), .5)} (${(pct(hit.map((r) => r.ms[m].day), .5) / 365).toFixed(2)}년)`); }
   const rev = res.map((r) => r.s.stats.revenue), spent = res.map((r) => r.s.stats.spent);
   console.log(`  수익 p50=${pct(rev, .5)} 지출 p50=${pct(spent, .5)} 대출잔액 p50=${pct(res.map((r) => r.s.loan), .5)}`);
 }

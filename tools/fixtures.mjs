@@ -12,10 +12,10 @@ const T = (mode, cost, min, fatigue, vb = 0) => ({ mode, costRoundTrip: cost, du
 export const FIXTURES = [
   mk('dom-ktx', 'domestic', 3, 1.0, T('ktx', 80000, 120, 5), 1.0),
   mk('dom-jeju', 'domestic', 3, 1.3, T('lcc', 130000, 75, 8), 1.1),
-  mk('asia-near', 'overseas', 3, 1.3, T('lcc', 350000, 140, 12), 1.0),
-  mk('asia-sea', 'overseas', 2, 1.4, T('lcc', 450000, 420, 18), 0.8),
-  mk('eu-long', 'overseas', 4, 1.6, T('fsc', 1700000, 780, 20), 1.5),
-  mk('am-long', 'overseas', 4, 1.6, T('fsc', 2100000, 840, 22), 1.6),
-  mk('oce-long', 'overseas', 4, 1.4, T('fsc', 1500000, 650, 20, 0.1), 1.4),
-  mk('afr-long', 'overseas', 2, 1.5, T('fsc', 2300000, 1100, 22), 1.0),
+  mk('asia-near', 'overseas', 3, 1.8, T('lcc', 350000, 140, 12), 1.0),
+  mk('asia-sea', 'overseas', 2, 2.0, T('lcc', 450000, 420, 18), 0.8),
+  mk('eu-long', 'overseas', 4, 2.4, T('fsc', 1700000, 780, 20), 1.5),
+  mk('am-long', 'overseas', 4, 2.6, T('fsc', 2100000, 840, 22), 1.6),
+  mk('oce-long', 'overseas', 4, 2.2, T('fsc', 1500000, 650, 20, 0.1), 1.4),
+  mk('afr-long', 'overseas', 2, 2.0, T('fsc', 2300000, 1100, 22), 1.0),
 ];

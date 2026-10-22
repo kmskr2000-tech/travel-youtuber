@@ -46,12 +46,12 @@ export function trendMult({ tags, month, bestSeason }, trends, bal) {
  * 조회수 = (구독자 × r + D) × Q × P × T × X,  D = 1,500 × Q  (설계서 §2.1, 확정)
  * viral: 이미 굴린 결과(boolean)
  */
-export function computeViews({ subs, rep, Q, P, T, viral, N = 1 }, bal) {
+export function computeViews({ subs, rep, Q, P, T, viral, N = 1, Dm = 1 }, bal) {
   const r = reachRate(rep, bal);
   const D = bal.discovery.perQ * Q;
   const pop = clamp(P, bal.popularity.min, bal.popularity.max);
   const X = viral ? bal.viral.mult : 1;
-  return Math.max(0, Math.round((subs * r + D) * Q * pop * T * X * N));
+  return Math.max(0, Math.round((subs * r + D) * Q * pop * T * X * N * Dm));
 }
 
 /** ΔS = V × c × (0.6 + 0.4 × Q/2) × 제목계수 */
@@ -86,4 +86,12 @@ export function noveltyMult(durationMin, firstVisit, bal) {
   const n = bal.novelty;
   const f = clamp01((durationMin - n.nearMin) / (n.farMin - n.nearMin));
   return +(n.min + (n.max - n.min) * f).toFixed(4);
+}
+
+/** 해외 거리 승수 Dm: 해외 여행지만, 편도 소요시간 nearMin→1.0, farMin 이상→max, 선형. 국내는 1. */
+export function distanceMult(durationMin, region, bal) {
+  if (region !== 'overseas') return 1;
+  const d = bal.distance;
+  const f = clamp01((durationMin - d.nearMin) / (d.farMin - d.nearMin));
+  return +(1 + (d.max - 1) * f).toFixed(4);
 }

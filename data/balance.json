@@ -135,5 +135,10 @@
     "max": 2.0,
     "nearMin": 120,
     "farMin": 900
+  },
+  "distance": {
+    "max": 1.5,
+    "nearMin": 120,
+    "farMin": 900
   }
 }
