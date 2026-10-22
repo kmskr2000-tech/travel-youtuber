@@ -84,7 +84,8 @@ export function evaluatePlan(dest, plan, bal) {
   cost.total = cost.transport + cost.lodging + cost.food + cost.cards + cost.rental;
 
   const recover = nights * (bal.lodgingRecover[plan.lodging] ?? 0);
-  const fatigue = (tr ? tr.fatigue * 2 : 0) + cardFatigue;
+  const legFatigue = tr ? Math.min(tr.fatigue, bal.travel.fatigueMax ?? 99) : 0;
+  const fatigue = legFatigue * 2 + cardFatigue;
   return {
     ok: errors.length === 0,
     errors,

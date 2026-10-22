@@ -154,3 +154,13 @@ test('미리보기는 상태를 바꾸지 않는다', () => {
   assert.ok(pv.affordable);
   assert.equal(JSON.stringify(s), snap);
 });
+
+import { noveltyMult } from '../src/engine/views.js';
+test('첫 방문 신선도 보너스: 재방문 x1, 첫 방문 1.3~2.0', async () => {
+  const bal = JSON.parse((await import('node:fs')).readFileSync(new URL('../data/balance.json', import.meta.url), 'utf8'));
+  assert.equal(noveltyMult(600, false, bal), 1);
+  assert.equal(noveltyMult(0, true, bal), 1.3);
+  assert.equal(noveltyMult(5000, true, bal), 2.0);
+  const mid = noveltyMult(500, true, bal);
+  assert.ok(mid > 1.3 && mid < 2.0);
+});

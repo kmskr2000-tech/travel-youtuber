@@ -3,7 +3,7 @@ import { makeRng } from './rng.js';
 import { evaluatePlan } from './trip.js';
 import { pay, earn, advanceDays, canAfford, monthOf, loanLimit } from './economy.js';
 import { pickEvent, sumEffects } from './events.js';
-import { contentScore, editScore, quality, trendMult, computeViews, computeSubGain, adRevenue,
+import { contentScore, editScore, quality, trendMult, computeViews, noveltyMult, computeSubGain, adRevenue,
   sponsorChance, sponsorAmount, clamp } from './views.js';
 
 const levelUp = (lv, xp, bal) => {
@@ -77,7 +77,10 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
   const T = trendMult({ tags: ev.tags, month, bestSeason: dest.bestSeason }, data.trends, bal);
   const viral = rng.chance(bal.viral.chance);
   const upDay = s.day + daysPassed;
-  const views = computeViews({ subs: s.subs, rep: s.reputation, Q, P: dest.popularity, T, viral }, bal);
+  const firstVisit = !s.visited.includes(dest.id);
+  const trn = dest.transports.find((x) => x.mode === plan.transport);
+  const N = noveltyMult(trn?.durationMin ?? 0, firstVisit, bal);
+  const views = computeViews({ subs: s.subs, rep: s.reputation, Q, P: dest.popularity, T, viral, N }, bal);
   const subGain = computeSubGain(views, Q, style, bal);
   const ad = adRevenue(views, bal);
   const st = bal.titleStyles[style] ?? bal.titleStyles.info;
@@ -116,7 +119,7 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
   };
   s.videos = [...s.videos, { day: upDay, dest: dest.id, views, subGain, ad, Q: +Q.toFixed(3), viral, style }];
   if (!s.over && s.subs >= bal.win.subs) s.ended = { type: 'win', day: s.day };
-  return finish(s, state0, rng, { log, ev, views, subGain, ad, Q, T, C, E, viral, daysPassed, sponsorNote });
+  return finish(s, state0, rng, { log, ev, views, subGain, ad, Q, T, C, E, N, firstVisit, viral, daysPassed, sponsorNote });
 }
 
 function finish(s, state0, rng, report) {

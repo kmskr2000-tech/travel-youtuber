@@ -46,12 +46,12 @@ export function trendMult({ tags, month, bestSeason }, trends, bal) {
  * 조회수 = (구독자 × r + D) × Q × P × T × X,  D = 1,500 × Q  (설계서 §2.1, 확정)
  * viral: 이미 굴린 결과(boolean)
  */
-export function computeViews({ subs, rep, Q, P, T, viral }, bal) {
+export function computeViews({ subs, rep, Q, P, T, viral, N = 1 }, bal) {
   const r = reachRate(rep, bal);
   const D = bal.discovery.perQ * Q;
   const pop = clamp(P, bal.popularity.min, bal.popularity.max);
   const X = viral ? bal.viral.mult : 1;
-  return Math.max(0, Math.round((subs * r + D) * Q * pop * T * X));
+  return Math.max(0, Math.round((subs * r + D) * Q * pop * T * X * N));
 }
 
 /** ΔS = V × c × (0.6 + 0.4 × Q/2) × 제목계수 */
@@ -75,4 +75,15 @@ export function sponsorChance(subs, rep, bal) {
   const s = bal.sponsor;
   if (subs < s.minSubs) return 0;
   return Math.min(s.maxProb, subs / s.probDivisor) * clamp01(rep / 100);
+}
+
+/**
+ * 첫 방문 신선도 보너스 N (승인 2026-10-22): 첫 방문 시 x1.3~2.0, 재방문 x1.
+ * 편도 소요시간이 길수록(먼 곳일수록) 큼. nearMin 이하=min, farMin 이상=max, 선형 보간.
+ */
+export function noveltyMult(durationMin, firstVisit, bal) {
+  if (!firstVisit) return 1;
+  const n = bal.novelty;
+  const f = clamp01((durationMin - n.nearMin) / (n.farMin - n.nearMin));
+  return +(n.min + (n.max - n.min) * f).toFixed(4);
 }
