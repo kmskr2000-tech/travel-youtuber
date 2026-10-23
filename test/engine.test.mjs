@@ -116,12 +116,16 @@ test('예산 부족/일정 오류는 예외', () => {
   assert.throws(() => resolveTrip(newState(bal, 1), dest, { ...basePlan, transport: 'cruise' }, {}, data, bal), /일정 오류/);
 });
 
-test('번아웃: 체력 0 이하 → 게임오버', () => {
+test('번아웃: 체력 0 이하 → 게임오버 아님, 휴식 후 복귀', () => {
   const eu = FIXTURES.find((d) => d.id === 'eu-long');
   const plan = { days: 5, transport: 'fsc', rental: false, lodging: 'guesthouse', placements: [] };
   const s0 = { ...newState(bal, 3), cash: 1e8, stamina: 10 };
   const { state } = resolveTrip(s0, eu, plan, { editDays: 0, choose: (e) => e.choices.length - 1 }, data, bal);
-  assert.equal(state.over?.type, 'burnout');
+  assert.equal(state.over, null);
+  assert.equal(state.burnouts, 1);
+  assert.equal(state.stamina, bal.burnout.recoverTo);
+  assert.ok(state.day - s0.day >= bal.burnout.restDays);
+  assert.equal(state.videos.length, 0);
 });
 
 test('엔딩: 구독자 100만 도달', () => {
@@ -163,4 +167,37 @@ test('첫 방문 신선도 보너스: 재방문 x1, 첫 방문 1.3~2.0', async (
   assert.equal(noveltyMult(5000, true, bal), 2.0);
   const mid = noveltyMult(500, true, bal);
   assert.ok(mid > 1.3 && mid < 2.0);
+});
+
+test('번아웃/고구독자: 체력 상한·단독 운영 배율은 10만~100만 구간 선형', async () => {
+  const { staminaCap, soloMult } = await import('../src/engine/burnout.js');
+  assert.equal(staminaCap(99999, bal), 100);
+  assert.equal(staminaCap(1000000, bal), bal.burnout.staminaFloor);
+  assert.equal(soloMult(100000, bal), 1);
+  assert.equal(soloMult(1000000, bal), bal.burnout.soloMax);
+  assert.ok(staminaCap(550000, bal) < 100 && staminaCap(550000, bal) > bal.burnout.staminaFloor);
+});
+
+test('하락형 정체: 연속 N편 비율 미달 → reachMult 감소, 회복 시 복구, 1만 미만은 제외', async () => {
+  const { stagnationUpdate } = await import('../src/engine/burnout.js');
+  const g = bal.stagnation;
+  let s = { subs: 50000, lowStreak: 0, reachMult: 1 };
+  for (let i = 0; i < g.streakN - 1; i++) s = { ...s, ...stagnationUpdate(s, 1000, bal) };
+  assert.equal(s.reachMult, 1);
+  s = { ...s, ...stagnationUpdate(s, 1000, bal) };
+  assert.ok(s.reachMult < 1);
+  const low = s.reachMult;
+  s = { ...s, ...stagnationUpdate(s, 50000, bal) };
+  assert.equal(s.lowStreak, 0);
+  assert.ok(s.reachMult > low);
+  const small = stagnationUpdate({ subs: 5000, lowStreak: 9, reachMult: 1 }, 10, bal);
+  assert.equal(small.lowStreak, 0);
+});
+
+test('번아웃 복귀 후에도 계속 플레이 가능(over 없음)', () => {
+  const eu = FIXTURES.find((d) => d.id === 'eu-long');
+  const plan = { days: 5, transport: 'fsc', rental: false, lodging: 'guesthouse', placements: [] };
+  const { state } = resolveTrip({ ...newState(bal, 3), cash: 1e8, stamina: 10 }, eu, plan, { choose: (e) => e.choices.length - 1 }, data, bal);
+  const r = resolveTrip(state, dest, basePlan, { editDays: 1 }, data, bal);
+  assert.equal(r.state.videos.length, 1);
 });

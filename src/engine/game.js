@@ -3,6 +3,7 @@ import { makeRng } from './rng.js';
 import { evaluatePlan } from './trip.js';
 import { pay, earn, advanceDays, canAfford, monthOf, loanLimit } from './economy.js';
 import { pickEvent, sumEffects } from './events.js';
+import { staminaCap, soloMult, stagnationUpdate } from './burnout.js';
 import { contentScore, editScore, quality, trendMult, computeViews, noveltyMult, distanceMult, computeSubGain, adRevenue,
   sponsorChance, sponsorAmount, clamp } from './views.js';
 
@@ -11,10 +12,13 @@ const levelUp = (lv, xp, bal) => {
   return [lv, xp];
 };
 
+/** 체력 변화: 회복 − 피로×단독운영 배율 (구독자 10만+) */
+export const tripStaminaDelta = (ev, subs, bal) => ev.recover - Math.round(ev.fatigue * soloMult(subs, bal));
+
 /** 확정 전 미리보기 (UI 플래너용) */
 export function previewTrip(state, dest, plan, bal) {
   const ev = evaluatePlan(dest, plan, bal);
-  return { ...ev, affordable: canAfford(state, ev.cost.total, bal), staminaAfter: state.stamina + ev.staminaDelta };
+  return { ...ev, affordable: canAfford(state, ev.cost.total, bal), staminaAfter: state.stamina + tripStaminaDelta(ev, state.subs, bal) };
 }
 
 /**
@@ -52,7 +56,8 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
     if (e) apply(e, 'transport');
   }
   // 촬영: 슬롯 진행. 시작 체력에서 이동·활동 피로를 먼저 반영, 야간 회복은 하루 단위 안분
-  stamina += ev.staminaDelta;
+  const cap = staminaCap(s.subs, bal);
+  stamina = Math.min(stamina, cap) + tripStaminaDelta(ev, s.subs, bal);
   const slotCount = plan.days * 3;
   for (let i = 0; i < slotCount; i++) {
     if (!rng.chance(bal.events.slotChance)) continue;
@@ -60,11 +65,16 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
     if (e) apply(e, 'slot');
   }
   if (extraCost > 0) { s = pay(s, extraCost, bal); s.stats = { ...s.stats, spent: s.stats.spent + extraCost }; }
-  stamina = clamp(stamina, -1, bal.stamina.max);
-  if (stamina <= 0) { s = { ...s, stamina: 0, over: { type: 'burnout', day: s.day } }; return finish(s, state0, rng, { log, ev }); }
+  stamina = clamp(stamina, -1, cap);
+  if (stamina <= 0) { // 번아웃: 게임오버 아님. 업로드 불발 + 강제 휴식 후 복귀
+    const b = bal.burnout;
+    s = advanceDays({ ...s, stamina: Math.min(cap, b.recoverTo), burnouts: (s.burnouts ?? 0) + 1,
+      reputation: clamp(s.reputation - b.repLoss, 0, 100), lowStreak: 0 }, ev.totalDays + extraDays + b.restDays, bal);
+    return finish(s, state0, rng, { log, ev, burnout: true, restDays: b.restDays });
+  }
 
   // 편집일: 체력 회복 + 날짜 경과
-  stamina = Math.min(bal.stamina.max, stamina + editDays * bal.stamina.editDay);
+  stamina = Math.min(cap, stamina + editDays * bal.stamina.editDay);
   const daysPassed = ev.totalDays + extraDays + editDays;
 
   // 품질
@@ -81,7 +91,7 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
   const trn = dest.transports.find((x) => x.mode === plan.transport);
   const N = noveltyMult(trn?.durationMin ?? 0, firstVisit, bal);
   const Dm = distanceMult(trn?.durationMin ?? 0, dest.region, bal);
-  const views = computeViews({ subs: s.subs, rep: s.reputation, Q, P: dest.popularity, T, viral, N, Dm }, bal);
+  const views = computeViews({ subs: s.subs, rep: s.reputation, Q, P: dest.popularity, T, viral, N, Dm, R: s.reachMult ?? 1 }, bal);
   const subGain = computeSubGain(views, Q, style, bal);
   const ad = adRevenue(views, bal);
   const st = bal.titleStyles[style] ?? bal.titleStyles.info;
@@ -102,7 +112,8 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
   let sponsorNote = null;
   if (sponsorPending && ev.tags.includes(sponsorPending.tag)) { repDelta += 2; sponsorNote = 'fulfilled'; sponsorPending = null; }
 
-  s = advanceDays({ ...s, stamina: Math.round(stamina), lastUploadDay: upDay }, daysPassed, bal);
+  const stag = stagnationUpdate(s, views, bal);
+  s = advanceDays({ ...s, ...stag, stamina: Math.round(stamina), lastUploadDay: upDay }, daysPassed, bal);
   s = earn(s, ad);
   if (s.sponsorPending && sponsorPending === s.sponsorPending && s.day > s.sponsorPending.dueDay) {
     repDelta -= bal.sponsor.penaltyRep;
@@ -142,7 +153,7 @@ export function acceptSponsor(state, offer, bal) {
 /** 휴식(스튜디오): 하루 +25, 날짜 1일 경과 */
 export function rest(state, days, bal) {
   const n = advanceDays(state, days, bal);
-  return { ...n, stamina: Math.min(bal.stamina.max, n.stamina + days * bal.stamina.restDay) };
+  return { ...n, stamina: Math.min(staminaCap(n.subs, bal), n.stamina + days * bal.stamina.restDay) };
 }
 
 /** 스킬 훈련 구매: Lv n → n+1 비용 50,000 × n */

@@ -10,6 +10,7 @@ export function newState(bal, seed = Date.now() % 2 ** 31) {
     stamina: s.stamina, reputation: s.reputation,
     shootLv: s.shootLv, editLv: s.editLv, shootXp: 0, editXp: 0,
     lastUploadDay: 1, rngState: seed >>> 0,
+    burnouts: 0, lowStreak: 0, reachMult: 1,
     videos: [], visited: [], sponsorPending: null, over: null, ended: null,
     stats: { revenue: 0, spent: 0, interest: 0, uploads: 0 },
   };

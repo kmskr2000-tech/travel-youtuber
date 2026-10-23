@@ -4,6 +4,7 @@ import { makeRng } from '../src/engine/rng.js';
 import { newState } from '../src/state.js';
 import { resolveTrip, previewTrip, rest, rollSponsor, acceptSponsor, trainSkill } from '../src/engine/game.js';
 import { repay, availableCredit } from '../src/engine/economy.js';
+import { staminaCap, soloMult } from '../src/engine/burnout.js';
 import { FIXTURES } from './fixtures.mjs';
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
@@ -68,18 +69,22 @@ function run(policyName, seed) {
     if (sp) s = acceptSponsor(s, sp, bal);
     if (s.loan > 0 && s.cash > s.loan * 2 + 500000) s = repay(s, s.loan);
     if (s.cash > 400000 * s.shootLv && s.shootLv < 6 && policyName === 'scaler') s = trainSkill(s, 'shoot', bal);
-    const destId = rng.pick(p.dests);
-    const dest = FIXTURES.find((f) => f.id === destId);
     const budget = s.cash + availableCredit(s, bal);
-    const tr = dest.transports[0].mode;
-    // 예산 내에서 일수·숙소를 낮춰가며 가능한 일정 탐색
-    let plan = null, pv = null;
-    for (const d of [p.days, Math.max(1, p.days - 1), 1]) for (const lg of [p.lodging, 'guesthouse']) {
-      const cand = autoPlan(dest, d, tr, lg, budget, bal, Math.max(10, s.stamina + 30));
-      const c = previewTrip(s, dest, cand, bal);
-      if (c.ok && c.affordable && (c.staminaAfter > 5 || p.restBelow === 0)) { plan = cand; pv = c; break; }
+    // 후보 여행지를 섞어 실행 가능한 첫 일정을 채택 (불가능하면 다음 후보)
+    const order = [...p.dests]; for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rng.next() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    let plan = null, dest = null;
+    for (const destId of order) {
+      const dd = FIXTURES.find((f) => f.id === destId);
+      const tr = dd.transports[0].mode;
+      // 예산 내에서 일수·숙소를 낮춰가며 가능한 일정 탐색
+      for (const d of [p.days, Math.max(1, p.days - 1), 1]) for (const lg of [p.lodging, 'guesthouse']) {
+        const cand = autoPlan(dd, d, tr, lg, budget, bal, Math.max(10, (s.stamina - 6) / soloMult(s.subs, bal) + 30));
+        const c = previewTrip(s, dd, cand, bal);
+        if (c.ok && c.affordable && (c.staminaAfter > 5 || p.restBelow === 0)) { plan = cand; dest = dd; } // 기존 동작 유지: 마지막으로 가능한 일정이 덮어씀(=짧은 일정 우선). 기준선 비교용
+      }
+      if (plan) break;
     }
-    if (!plan) { if (++stuck > 3) break; s = rest(s, 3, bal); continue; }
+    if (!plan) { if (++stuck > 3) break; s = rest(s, Math.ceil((staminaCap(s.subs, bal) - s.stamina) / bal.stamina.restDay) + 1, bal); continue; }
     stuck = 0;
     ({ state: s } = resolveTrip(s, dest, plan, { editDays: p.edit, style: p.style, choose: () => 0 }, data, bal));
     v++;
@@ -99,6 +104,14 @@ for (const name of Object.keys(POLICIES)) {
   console.log(`  편수 p50=${pct(vids, .5)} p90=${pct(vids, .9)} | 최종구독자 p10=${pct(subs, .1)} p50=${pct(subs, .5)} p90=${pct(subs, .9)}`);
   if (wins.length) console.log(`  달성 편수 p50=${pct(wins.map((r) => r.v), .5)} 일수 p50=${pct(wins.map((r) => r.s.day), .5)} (${(pct(wins.map((r) => r.s.day), .5) / 365).toFixed(1)}년)`);
   for (const m of [10000, 100000, 1000000]) { const hit = res.filter((r) => r.ms[m]); if (hit.length) console.log(`  ${m / 10000}만 도달 ${hit.length}/${res.length}: 편수 p50=${pct(hit.map((r) => r.ms[m].v), .5)} 일수 p50=${pct(hit.map((r) => r.ms[m].day), .5)} (${(pct(hit.map((r) => r.ms[m].day), .5) / 365).toFixed(2)}년)`); }
+  for (const oc of Object.keys(cnt).filter((k) => k !== 'win')) { const f = res.filter((r) => r.outcome === oc); console.log(`  [${oc}] ${f.length}건: 종료일 p50=${pct(f.map((r) => r.s.day), .5)}일(${(pct(f.map((r) => r.s.day), .5) / 365).toFixed(2)}년) 편수 p50=${pct(f.map((r) => r.v), .5)} 구독자 p50=${pct(f.map((r) => r.s.subs), .5)} p90=${pct(f.map((r) => r.s.subs), .9)}`); }
+  console.log(`  번아웃 복귀 평균 ${(res.reduce((a, r) => a + (r.s.burnouts ?? 0), 0) / res.length).toFixed(2)}회/런, 1회 이상 ${res.filter((r) => r.s.burnouts > 0).length}/${res.length}, 정체 reachMult<1 종료 ${res.filter((r) => (r.s.reachMult ?? 1) < 1).length}/${res.length}`);
+  const bands = [[1e4, 1e5], [1e5, 1e6]];
+  for (const [lo, hi] of bands) {
+    const rs = res.flatMap((r) => r.s.videos.map((v) => { const sb = Math.max(1, 0); return v; }).filter(() => false));
+  }
+  const rat = (lo, hi) => res.flatMap((r) => { let sub = bal.start.subs; const out = []; for (const v of r.s.videos) { if (sub >= lo && sub < hi) out.push(v.views / sub); sub += v.subGain; } return out; });
+  for (const [lo, hi] of bands) { const a = rat(lo, hi); if (a.length) console.log(`  조회수/구독자 비율 (구독 ${lo / 1e4}만~${hi / 1e4}만) n=${a.length} p10=${pct(a, .1).toFixed(2)} p50=${pct(a, .5).toFixed(2)} p90=${pct(a, .9).toFixed(2)}`); }
   const rev = res.map((r) => r.s.stats.revenue), spent = res.map((r) => r.s.stats.spent);
   console.log(`  수익 p50=${pct(rev, .5)} 지출 p50=${pct(spent, .5)} 대출잔액 p50=${pct(res.map((r) => r.s.loan), .5)}`);
 }
