@@ -4,6 +4,11 @@ export function eligible(ev, ctx) {
   if (ev.trigger !== ctx.trigger) return false;
   if (c.months && !c.months.includes(ctx.month)) return false;
   if (c.regions && ctx.dest && !c.regions.includes(ctx.dest.region)) return false;
+  if (c.continents && ctx.dest && !c.continents.includes(ctx.dest.continent)) return false;
+  if (c.subregions && ctx.dest && !c.subregions.includes(ctx.dest.subregion)) return false;
+  if (c.countries && ctx.dest && !c.countries.includes(ctx.dest.country)) return false;
+  if (c.tags && ctx.dest && !c.tags.some((t) => ctx.dest.tags.includes(t))) return false;
+  if (c.minDurationMin != null && (ctx.durationMin ?? 0) < c.minDurationMin) return false;
   if (c.minSubs && ctx.subs < c.minSubs) return false;
   if (c.maxStamina != null && ctx.stamina > c.maxStamina) return false;
   if (c.modes && ctx.mode && !c.modes.includes(ctx.mode)) return false;

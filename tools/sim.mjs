@@ -25,8 +25,12 @@ const ALIAS = USE_DATA ? (() => {
     'oce-long': by('oceania'), 'eu-long': [...by('europe'), ...by('asia')], 'am-long': [...by('north_america'), ...by('south_america')], 'afr-long': by('africa') };
 })() : null;
 const expand = (ids) => (ALIAS ? ids.flatMap((i) => ALIAS[i] ?? [i]) : ids);
-const events = JSON.parse(readFileSync(new URL('../data/events.json', import.meta.url), 'utf8'));
-const data = { events, trends: [{ tag: '자연', months: [4, 5, 9, 10], multiplier: 1.15 }] };
+// --events <경로> / --trends <경로|none> 으로 데이터 교체 비교 (기본: data/events.json, data/trends.json)
+const events = JSON.parse(readFileSync(arg('--events', new URL('../data/events.json', import.meta.url)), 'utf8'));
+const trendsArg = arg('--trends', null);
+const trends = trendsArg === 'none' ? [{ tag: '자연', months: [4, 5, 9, 10], multiplier: 1.15 }]
+  : JSON.parse(readFileSync(trendsArg ?? new URL('../data/trends.json', import.meta.url), 'utf8'));
+const data = { events, trends };
 
 /** 슬롯을 점수/비용 탐욕으로 채움 */
 function autoPlan(dest, days, transport, lodging, budget, bal, maxFatigue = 999) {

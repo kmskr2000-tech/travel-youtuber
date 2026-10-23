@@ -120,7 +120,7 @@ test('번아웃: 체력 0 이하 → 게임오버 아님, 휴식 후 복귀', ()
   const eu = FIXTURES.find((d) => d.id === 'eu-long');
   const plan = { days: 5, transport: 'fsc', rental: false, lodging: 'guesthouse', placements: [] };
   const s0 = { ...newState(bal, 3), cash: 1e8, stamina: 10 };
-  const { state } = resolveTrip(s0, eu, plan, { editDays: 0, choose: (e) => e.choices.length - 1 }, data, bal);
+  const { state } = resolveTrip(s0, eu, plan, { editDays: 0, choose: (e) => e.choices.length - 1 }, { events: events.slice(0, 6), trends: [] }, bal);
   assert.equal(state.over, null);
   assert.equal(state.burnouts, 1);
   assert.equal(state.stamina, bal.burnout.recoverTo);
@@ -200,4 +200,23 @@ test('번아웃 복귀 후에도 계속 플레이 가능(over 없음)', () => {
   const { state } = resolveTrip({ ...newState(bal, 3), cash: 1e8, stamina: 10 }, eu, plan, { choose: (e) => e.choices.length - 1 }, data, bal);
   const r = resolveTrip(state, dest, basePlan, { editDays: 1 }, data, bal);
   assert.equal(r.state.videos.length, 1);
+});
+
+test('이벤트 조건: 대륙·태그·교통시간', async () => {
+  const { eligible } = await import('../src/engine/events.js');
+  const dest = { region: 'overseas', continent: 'asia', subregion: 'southeast-asia', country: 'TH', tags: ['도시', '먹방'] };
+  const base = { trigger: 'slot', month: 7, dest, subs: 0, stamina: 100 };
+  assert.ok(eligible({ trigger: 'slot', conditions: { continents: ['asia'], tags: ['먹방'] } }, base));
+  assert.ok(!eligible({ trigger: 'slot', conditions: { continents: ['europe'] } }, base));
+  assert.ok(!eligible({ trigger: 'slot', conditions: { tags: ['사막'] } }, base));
+  assert.ok(!eligible({ trigger: 'slot', conditions: { subregions: ['south-asia'] } }, base));
+  assert.ok(!eligible({ trigger: 'transport', conditions: { minDurationMin: 600 } }, { ...base, trigger: 'transport', durationMin: 300 }));
+  assert.ok(eligible({ trigger: 'transport', conditions: { minDurationMin: 600 } }, { ...base, trigger: 'transport', durationMin: 840 }));
+});
+
+test('이벤트·트렌드 데이터 스키마', () => {
+  const tr = JSON.parse(readFileSync(new URL('../data/trends.json', import.meta.url)));
+  assert.ok(events.length >= 40 && tr.length >= 15);
+  for (const t of tr) assert.ok(t.multiplier > 1 && t.multiplier <= 1.3 && t.months.length);
+  for (const e of events) assert.ok(e.choices.length >= 1 && ['slot', 'transport', 'upload'].includes(e.trigger));
 });

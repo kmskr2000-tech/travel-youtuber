@@ -52,7 +52,7 @@ export function resolveTrip(state0, dest, plan, opts, data, bal) {
 
   // 이동 이벤트
   if (rng.chance(bal.events.slotChance)) {
-    const e = pickEvent(data.events, ctx('transport', { mode: plan.transport }), rng);
+    const e = pickEvent(data.events, ctx('transport', { mode: plan.transport, durationMin: dest.transports.find((x) => x.mode === plan.transport)?.durationMin ?? 0 }), rng);
     if (e) apply(e, 'transport');
   }
   // 촬영: 슬롯 진행. 시작 체력에서 이동·활동 피로를 먼저 반영, 야간 회복은 하루 단위 안분

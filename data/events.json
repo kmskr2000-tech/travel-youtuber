@@ -1,30 +1,1218 @@
 [
-  { "id": "weather-typhoon", "trigger": "slot", "weight": 3, "conditions": { "months": [7, 8, 9] },
-    "text": "태풍 영향으로 촬영이 어려워졌다.",
-    "choices": [
-      { "label": "강행", "effects": { "stamina": -10, "W": -0.15 } },
-      { "label": "실내 대체", "effects": { "cost": 50000, "W": 0.0 } } ] },
-  { "id": "weather-rain", "trigger": "slot", "weight": 4, "conditions": {},
-    "text": "비가 내린다. 야외 촬영 화면이 칙칙하다.",
-    "choices": [
-      { "label": "그대로 촬영", "effects": { "W": -0.08 } },
-      { "label": "우비 구입·분위기 살리기", "effects": { "cost": 20000, "W": 0.02 } } ] },
-  { "id": "strike-airline", "trigger": "transport", "weight": 2, "conditions": { "modes": ["lcc", "fsc"] },
-    "text": "항공사 파업으로 결항 소식이 들려온다.",
-    "choices": [
-      { "label": "대체편 구매", "effects": { "cost": 200000 } },
-      { "label": "하루 대기", "effects": { "days": 1, "stamina": -5 } } ] },
-  { "id": "local-friend", "trigger": "slot", "weight": 2, "conditions": {},
-    "text": "현지에서 친절한 사람을 만나 숨은 명소를 소개받았다.",
-    "choices": [ { "label": "함께 촬영", "effects": { "W": 0.12, "rep": 1 } } ] },
-  { "id": "hate-comment", "trigger": "upload", "weight": 3, "conditions": {},
-    "text": "악플이 달렸다.",
-    "choices": [
-      { "label": "무시", "effects": { "rep": -2 } },
-      { "label": "해명 댓글·영상", "effects": { "cost": 0, "days": 1, "rep": 1 } } ] },
-  { "id": "health-warning", "trigger": "slot", "weight": 5, "conditions": { "maxStamina": 30 },
-    "text": "몸이 한계다. 쉬지 않으면 번아웃이 올 수 있다.",
-    "choices": [
-      { "label": "일정 중 휴식", "effects": { "stamina": 10, "W": -0.05 } },
-      { "label": "강행", "effects": { "stamina": -5 } } ] }
+ {
+  "id": "weather-typhoon",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "months": [
+    7,
+    8,
+    9
+   ]
+  },
+  "text": "태풍 영향으로 촬영이 어려워졌다.",
+  "choices": [
+   {
+    "label": "강행",
+    "effects": {
+     "stamina": -10,
+     "W": -0.15
+    }
+   },
+   {
+    "label": "실내 대체",
+    "effects": {
+     "cost": 50000,
+     "W": 0
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-rain",
+  "trigger": "slot",
+  "weight": 4,
+  "conditions": {},
+  "text": "비가 내린다. 야외 촬영 화면이 칙칙하다.",
+  "choices": [
+   {
+    "label": "그대로 촬영",
+    "effects": {
+     "W": -0.08
+    }
+   },
+   {
+    "label": "우비 구입·분위기 살리기",
+    "effects": {
+     "cost": 20000,
+     "W": 0.02
+    }
+   }
+  ]
+ },
+ {
+  "id": "strike-airline",
+  "trigger": "transport",
+  "weight": 2,
+  "conditions": {
+   "modes": [
+    "lcc",
+    "fsc"
+   ]
+  },
+  "text": "항공사 파업으로 결항 소식이 들려온다.",
+  "choices": [
+   {
+    "label": "대체편 구매",
+    "effects": {
+     "cost": 200000
+    }
+   },
+   {
+    "label": "하루 대기",
+    "effects": {
+     "days": 1,
+     "stamina": -5
+    }
+   }
+  ]
+ },
+ {
+  "id": "local-friend",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {},
+  "text": "현지에서 친절한 사람을 만나 숨은 명소를 소개받았다.",
+  "choices": [
+   {
+    "label": "함께 촬영",
+    "effects": {
+     "W": 0.12,
+     "rep": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "hate-comment",
+  "trigger": "upload",
+  "weight": 3,
+  "conditions": {},
+  "text": "악플이 달렸다.",
+  "choices": [
+   {
+    "label": "무시",
+    "effects": {
+     "rep": -2
+    }
+   },
+   {
+    "label": "해명 댓글·영상",
+    "effects": {
+     "cost": 0,
+     "days": 1,
+     "rep": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "health-warning",
+  "trigger": "slot",
+  "weight": 5,
+  "conditions": {
+   "maxStamina": 30
+  },
+  "text": "몸이 한계다. 쉬지 않으면 번아웃이 올 수 있다.",
+  "choices": [
+   {
+    "label": "일정 중 휴식",
+    "effects": {
+     "stamina": 10,
+     "W": -0.05
+    }
+   },
+   {
+    "label": "강행",
+    "effects": {
+     "stamina": -5
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-heatwave",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "continents": [
+    "asia",
+    "africa",
+    "europe",
+    "oceania"
+   ]
+  },
+  "text": "폭염이다. 카메라도 사람도 달아오른다.",
+  "choices": [
+   {
+    "label": "그늘 없이 강행",
+    "effects": {
+     "stamina": -9,
+     "W": -0.06
+    }
+   },
+   {
+    "label": "카페에서 쉬었다 촬영",
+    "effects": {
+     "cost": 15000,
+     "stamina": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-monsoon",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "subregions": [
+    "southeast-asia",
+    "south-asia"
+   ]
+  },
+  "text": "스콜이 쏟아진다. 렌즈에 물방울이 맺힌다.",
+  "choices": [
+   {
+    "label": "우중 촬영",
+    "effects": {
+     "stamina": -6,
+     "W": -0.04
+    }
+   },
+   {
+    "label": "비 그치길 기다림",
+    "effects": {
+     "stamina": 2,
+     "W": -0.1
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-snowstorm",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "months": [
+    12,
+    1,
+    2
+   ],
+   "continents": [
+    "europe",
+    "north_america"
+   ]
+  },
+  "text": "눈보라가 몰아친다. 시야가 하얗다.",
+  "choices": [
+   {
+    "label": "눈 속 촬영 강행",
+    "effects": {
+     "stamina": -9,
+     "W": 0.04
+    }
+   },
+   {
+    "label": "실내 대체",
+    "effects": {
+     "cost": 40000,
+     "W": -0.04
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-domestic-snow",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "months": [
+    12,
+    1,
+    2
+   ],
+   "regions": [
+    "domestic"
+   ]
+  },
+  "text": "폭설로 도로가 미끄럽다.",
+  "choices": [
+   {
+    "label": "천천히 이동하며 촬영",
+    "effects": {
+     "stamina": -5,
+     "W": 0.05
+    }
+   },
+   {
+    "label": "숙소에서 대기",
+    "effects": {
+     "W": -0.08
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-golden-light",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "tags": [
+    "자연",
+    "뷰",
+    "바다",
+    "야경"
+   ]
+  },
+  "text": "완벽한 빛이 들어온다. 마법 같은 순간이다.",
+  "choices": [
+   {
+    "label": "놓치지 않고 촬영",
+    "effects": {
+     "stamina": -2,
+     "W": 0.14
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-aurora-burst",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "tags": [
+    "오로라"
+   ],
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  "text": "오로라가 하늘을 가득 채운다!",
+  "choices": [
+   {
+    "label": "밤새 촬영",
+    "effects": {
+     "stamina": -10,
+     "W": 0.22,
+     "rep": 1
+    }
+   },
+   {
+    "label": "잠깐만 찍고 휴식",
+    "effects": {
+     "stamina": -2,
+     "W": 0.1
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-cherry-bloom",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "tags": [
+    "벚꽃"
+   ],
+   "months": [
+    3,
+    4
+   ]
+  },
+  "text": "벚꽃이 만개했다. 어디를 찍어도 화보다.",
+  "choices": [
+   {
+    "label": "꽃비 속 촬영",
+    "effects": {
+     "stamina": -3,
+     "W": 0.16
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-autumn-leaves",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "tags": [
+    "자연"
+   ],
+   "months": [
+    10,
+    11
+   ]
+  },
+  "text": "단풍이 절정이다.",
+  "choices": [
+   {
+    "label": "산책하며 촬영",
+    "effects": {
+     "stamina": -4,
+     "W": 0.12
+    }
+   },
+   {
+    "label": "드론 띄우기",
+    "effects": {
+     "cost": 10000,
+     "W": 0.15,
+     "stamina": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-sandstorm",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "tags": [
+    "사막"
+   ]
+  },
+  "text": "모래폭풍이 불어온다.",
+  "choices": [
+   {
+    "label": "장비 보호하며 강행",
+    "effects": {
+     "stamina": -8,
+     "W": 0.02
+    }
+   },
+   {
+    "label": "텐트에서 대기",
+    "effects": {
+     "W": -0.1,
+     "cost": 10000
+    }
+   }
+  ]
+ },
+ {
+  "id": "weather-rough-sea",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "tags": [
+    "바다",
+    "섬"
+   ]
+  },
+  "text": "파도가 높아 배가 흔들린다.",
+  "choices": [
+   {
+    "label": "멀미약 먹고 촬영",
+    "effects": {
+     "cost": 5000,
+     "stamina": -5
+    }
+   },
+   {
+    "label": "액티비티 취소",
+    "effects": {
+     "W": -0.09
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-scam",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "regions": [
+    "overseas"
+   ],
+   "continents": [
+    "europe",
+    "asia",
+    "south_america",
+    "africa"
+   ]
+  },
+  "text": "바가지 상술을 만났다.",
+  "choices": [
+   {
+    "label": "깎아서 지불",
+    "effects": {
+     "cost": 30000,
+     "stamina": -3
+    }
+   },
+   {
+    "label": "영상 소재로 쓰기",
+    "effects": {
+     "cost": 80000,
+     "W": 0.06,
+     "rep": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-pickpocket",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "continents": [
+    "europe",
+    "south_america"
+   ],
+   "tags": [
+    "도시"
+   ]
+  },
+  "text": "소매치기 미수! 가방이 열려 있었다.",
+  "choices": [
+   {
+    "label": "조심하며 촬영 계속",
+    "effects": {
+     "stamina": -5
+    }
+   },
+   {
+    "label": "지갑 분실 신고",
+    "effects": {
+     "cost": 120000,
+     "days": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-food-poisoning",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "continents": [
+    "asia",
+    "africa",
+    "south_america"
+   ],
+   "tags": [
+    "먹방",
+    "로컬"
+   ]
+  },
+  "text": "길거리 음식에 배탈이 났다.",
+  "choices": [
+   {
+    "label": "참고 촬영",
+    "effects": {
+     "stamina": -12,
+     "W": -0.05
+    }
+   },
+   {
+    "label": "약 먹고 쉬기",
+    "effects": {
+     "cost": 10000,
+     "stamina": -4,
+     "W": -0.03
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-altitude",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "subregions": [
+    "south-america",
+    "latin-america",
+    "east-africa",
+    "central-asia"
+   ],
+   "tags": [
+    "트레킹",
+    "자연",
+    "유적"
+   ]
+  },
+  "text": "고산병 증세가 온다.",
+  "choices": [
+   {
+    "label": "천천히 적응",
+    "effects": {
+     "stamina": -7
+    }
+   },
+   {
+    "label": "산소캔 구입",
+    "effects": {
+     "cost": 30000,
+     "stamina": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-language-barrier",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "regions": [
+    "overseas"
+   ],
+   "subregions": [
+    "northeast-asia",
+    "southeast-asia",
+    "south-america",
+    "latin-america",
+    "middle-east",
+    "north-africa"
+   ]
+  },
+  "text": "말이 통하지 않아 길을 헤맨다.",
+  "choices": [
+   {
+    "label": "번역기로 해결",
+    "effects": {
+     "stamina": -4
+    }
+   },
+   {
+    "label": "손짓발짓 브이로그",
+    "effects": {
+     "stamina": -4,
+     "W": 0.05
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-street-festival",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "tags": [
+    "축제",
+    "로컬",
+    "문화",
+    "엔터"
+   ]
+  },
+  "text": "마침 동네 축제가 열렸다.",
+  "choices": [
+   {
+    "label": "인파 속으로",
+    "effects": {
+     "stamina": -5,
+     "W": 0.14,
+     "rep": 1
+    }
+   },
+   {
+    "label": "멀리서 구경",
+    "effects": {
+     "W": 0.04
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-local-guide",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "regions": [
+    "overseas"
+   ]
+  },
+  "text": "현지 가이드가 숨은 명소를 알려주겠다고 한다.",
+  "choices": [
+   {
+    "label": "가이드 고용",
+    "effects": {
+     "cost": 50000,
+     "W": 0.15,
+     "stamina": 2
+    }
+   },
+   {
+    "label": "정중히 거절",
+    "effects": {}
+   }
+  ]
+ },
+ {
+  "id": "region-drone-ban",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "regions": [
+    "overseas"
+   ],
+   "tags": [
+    "도시",
+    "자연",
+    "뷰"
+   ]
+  },
+  "text": "드론 촬영 금지 구역이다.",
+  "choices": [
+   {
+    "label": "몰래 띄운다",
+    "effects": {
+     "W": 0.08,
+     "cost": 100000,
+     "rep": -1
+    }
+   },
+   {
+    "label": "지상 촬영만",
+    "effects": {
+     "W": -0.06
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-crowd",
+  "trigger": "slot",
+  "weight": 4,
+  "conditions": {
+   "tags": [
+    "도시",
+    "역사",
+    "문화"
+   ],
+   "months": [
+    4,
+    5,
+    7,
+    8,
+    10,
+    12
+   ]
+  },
+  "text": "관광객이 너무 많아 프레임이 복잡하다.",
+  "choices": [
+   {
+    "label": "인파를 피해 새벽 촬영",
+    "effects": {
+     "stamina": -7,
+     "W": 0.05
+    }
+   },
+   {
+    "label": "그냥 촬영",
+    "effects": {
+     "W": -0.07
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-domestic-waiting",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "regions": [
+    "domestic"
+   ],
+   "tags": [
+    "먹방"
+   ]
+  },
+  "text": "맛집 웨이팅이 두 시간이다.",
+  "choices": [
+   {
+    "label": "기다려서 먹방",
+    "effects": {
+     "stamina": -4,
+     "W": 0.1
+    }
+   },
+   {
+    "label": "다른 가게로",
+    "effects": {
+     "W": -0.03
+    }
+   }
+  ]
+ },
+ {
+  "id": "region-domestic-bustle",
+  "trigger": "slot",
+  "weight": 2,
+  "conditions": {
+   "regions": [
+    "domestic"
+   ],
+   "months": [
+    1,
+    2,
+    5,
+    8,
+    9,
+    10
+   ]
+  },
+  "text": "연휴 인파로 곳곳이 붐빈다.",
+  "choices": [
+   {
+    "label": "시간 조정",
+    "effects": {
+     "stamina": -4,
+     "W": 0.02
+    }
+   },
+   {
+    "label": "감수하고 촬영",
+    "effects": {
+     "W": -0.06
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-delay",
+  "trigger": "transport",
+  "weight": 4,
+  "conditions": {
+   "modes": [
+    "lcc",
+    "fsc"
+   ]
+  },
+  "text": "항공기가 두 시간 지연된다.",
+  "choices": [
+   {
+    "label": "공항에서 대기",
+    "effects": {
+     "stamina": -6
+    }
+   },
+   {
+    "label": "라운지 이용",
+    "effects": {
+     "cost": 40000,
+     "stamina": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-baggage-lost",
+  "trigger": "transport",
+  "weight": 2,
+  "conditions": {
+   "modes": [
+    "lcc",
+    "fsc"
+   ],
+   "regions": [
+    "overseas"
+   ]
+  },
+  "text": "수하물이 도착하지 않았다.",
+  "choices": [
+   {
+    "label": "도착 기다림",
+    "effects": {
+     "days": 1,
+     "stamina": -4
+    }
+   },
+   {
+    "label": "필수품 새로 구입",
+    "effects": {
+     "cost": 150000
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-jetlag",
+  "trigger": "transport",
+  "weight": 4,
+  "conditions": {
+   "modes": [
+    "lcc",
+    "fsc"
+   ],
+   "minDurationMin": 600
+  },
+  "text": "시차 적응이 안 된다.",
+  "choices": [
+   {
+    "label": "버티며 촬영",
+    "effects": {
+     "stamina": -10
+    }
+   },
+   {
+    "label": "첫날 쉬며 적응",
+    "effects": {
+     "days": 1,
+     "stamina": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-upgrade",
+  "trigger": "transport",
+  "weight": 1,
+  "conditions": {
+   "modes": [
+    "fsc"
+   ]
+  },
+  "text": "비즈니스석으로 무료 업그레이드됐다!",
+  "choices": [
+   {
+    "label": "푹 자며 이동",
+    "effects": {
+     "stamina": 10,
+     "W": 0.03
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-window-view",
+  "trigger": "transport",
+  "weight": 2,
+  "conditions": {
+   "modes": [
+    "lcc",
+    "fsc",
+    "ktx",
+    "ferry",
+    "cruise"
+   ]
+  },
+  "text": "창밖 풍경이 그림 같다.",
+  "choices": [
+   {
+    "label": "창밖을 촬영",
+    "effects": {
+     "W": 0.08
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-ktx-delay",
+  "trigger": "transport",
+  "weight": 3,
+  "conditions": {
+   "modes": [
+    "ktx",
+    "bus"
+   ]
+  },
+  "text": "선로 점검으로 열차가 서행한다.",
+  "choices": [
+   {
+    "label": "기다림",
+    "effects": {
+     "stamina": -3
+    }
+   },
+   {
+    "label": "택시로 환승",
+    "effects": {
+     "cost": 40000
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-bus-breakdown",
+  "trigger": "transport",
+  "weight": 2,
+  "conditions": {
+   "modes": [
+    "bus"
+   ]
+  },
+  "text": "버스가 고장 났다.",
+  "choices": [
+   {
+    "label": "다음 차 대기",
+    "effects": {
+     "stamina": -5,
+     "days": 1
+    }
+   },
+   {
+    "label": "택시 합승",
+    "effects": {
+     "cost": 60000
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-ferry-cancel",
+  "trigger": "transport",
+  "weight": 2,
+  "conditions": {
+   "modes": [
+    "ferry",
+    "cruise"
+   ]
+  },
+  "text": "풍랑으로 배가 결항됐다.",
+  "choices": [
+   {
+    "label": "하루 대기",
+    "effects": {
+     "days": 1,
+     "stamina": -3
+    }
+   },
+   {
+    "label": "항공편으로 변경",
+    "effects": {
+     "cost": 150000
+    }
+   }
+  ]
+ },
+ {
+  "id": "transport-rental-scratch",
+  "trigger": "transport",
+  "weight": 2,
+  "conditions": {
+   "modes": [
+    "rental"
+   ]
+  },
+  "text": "주차 중 렌터카가 긁혔다.",
+  "choices": [
+   {
+    "label": "자비로 수리",
+    "effects": {
+     "cost": 200000
+    }
+   },
+   {
+    "label": "보험 처리",
+    "effects": {
+     "cost": 50000,
+     "rep": 0,
+     "stamina": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "health-cold",
+  "trigger": "slot",
+  "weight": 4,
+  "conditions": {
+   "maxStamina": 60
+  },
+  "text": "으슬으슬 감기 기운이 있다.",
+  "choices": [
+   {
+    "label": "견디며 촬영",
+    "effects": {
+     "stamina": -6,
+     "W": -0.03
+    }
+   },
+   {
+    "label": "약 먹고 숙면",
+    "effects": {
+     "cost": 10000,
+     "stamina": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "health-sleep-deprived",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {
+   "maxStamina": 45
+  },
+  "text": "잠을 못 자 눈이 감긴다.",
+  "choices": [
+   {
+    "label": "커피로 버티기",
+    "effects": {
+     "cost": 5000,
+     "stamina": -4
+    }
+   },
+   {
+    "label": "낮잠 후 촬영",
+    "effects": {
+     "stamina": 6,
+     "W": -0.05
+    }
+   }
+  ]
+ },
+ {
+  "id": "health-camera-fail",
+  "trigger": "slot",
+  "weight": 3,
+  "conditions": {},
+  "text": "카메라가 갑자기 먹통이 됐다.",
+  "choices": [
+   {
+    "label": "수리점 방문",
+    "effects": {
+     "cost": 80000,
+     "days": 0,
+     "stamina": -3
+    }
+   },
+   {
+    "label": "폰으로 대체 촬영",
+    "effects": {
+     "W": -0.12
+    }
+   }
+  ]
+ },
+ {
+  "id": "health-hotel-upgrade",
+  "trigger": "slot",
+  "weight": 1,
+  "conditions": {},
+  "text": "숙소에서 방을 업그레이드해줬다.",
+  "choices": [
+   {
+    "label": "푹 쉬기",
+    "effects": {
+     "stamina": 10
+    }
+   }
+  ]
+ },
+ {
+  "id": "upload-copyright",
+  "trigger": "upload",
+  "weight": 3,
+  "conditions": {},
+  "text": "배경음악 저작권 경고가 날아왔다.",
+  "choices": [
+   {
+    "label": "그대로 두기",
+    "effects": {
+     "rep": -1
+    }
+   },
+   {
+    "label": "음악 교체·재업로드",
+    "effects": {
+     "days": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "upload-misinfo",
+  "trigger": "upload",
+  "weight": 3,
+  "conditions": {},
+  "text": "정보 오류를 지적하는 댓글이 달렸다.",
+  "choices": [
+   {
+    "label": "무시",
+    "effects": {
+     "rep": -2
+    }
+   },
+   {
+    "label": "정정 고정댓글",
+    "effects": {
+     "rep": 1,
+     "days": 0
+    }
+   }
+  ]
+ },
+ {
+  "id": "upload-thumbnail-hit",
+  "trigger": "upload",
+  "weight": 2,
+  "conditions": {},
+  "text": "썸네일이 커뮤니티에서 화제가 됐다.",
+  "choices": [
+   {
+    "label": "활용해 홍보",
+    "effects": {
+     "rep": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "upload-viral-comment",
+  "trigger": "upload",
+  "weight": 2,
+  "conditions": {
+   "minSubs": 10000
+  },
+  "text": "댓글 하나가 밈이 됐다.",
+  "choices": [
+   {
+    "label": "답글로 호응",
+    "effects": {
+     "rep": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "upload-collab-offer",
+  "trigger": "upload",
+  "weight": 2,
+  "conditions": {
+   "minSubs": 50000
+  },
+  "text": "다른 크리에이터가 콜라보를 제안한다.",
+  "choices": [
+   {
+    "label": "수락 (일정 하루 조정)",
+    "effects": {
+     "rep": 3,
+     "days": 1
+    }
+   },
+   {
+    "label": "정중히 거절",
+    "effects": {}
+   }
+  ]
+ }
 ]

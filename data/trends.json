@@ -1,0 +1,188 @@
+[
+ {
+  "tag": "벚꽃",
+  "months": [
+   3,
+   4
+  ],
+  "multiplier": 1.25,
+  "label": "벚꽃 시즌 검색량 폭증"
+ },
+ {
+  "tag": "오로라",
+  "months": [
+   9,
+   10,
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "multiplier": 1.2,
+  "label": "오로라 헌팅 열풍"
+ },
+ {
+  "tag": "눈",
+  "months": [
+   12,
+   1,
+   2
+  ],
+  "multiplier": 1.2,
+  "label": "겨울왕국 감성"
+ },
+ {
+  "tag": "온천",
+  "months": [
+   11,
+   12,
+   1,
+   2
+  ],
+  "multiplier": 1.15,
+  "label": "온천 힐링 여행"
+ },
+ {
+  "tag": "휴양",
+  "months": [
+   7,
+   8
+  ],
+  "multiplier": 1.15,
+  "label": "여름휴가 시즌"
+ },
+ {
+  "tag": "바다",
+  "months": [
+   7,
+   8
+  ],
+  "multiplier": 1.15,
+  "label": "여름 바다 영상 수요"
+ },
+ {
+  "tag": "액티비티",
+  "months": [
+   6,
+   7,
+   8
+  ],
+  "multiplier": 1.15,
+  "label": "여름 액티비티"
+ },
+ {
+  "tag": "자연",
+  "months": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "multiplier": 1.15,
+  "label": "봄가을 자연 감성"
+ },
+ {
+  "tag": "축제",
+  "months": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "multiplier": 1.15,
+  "label": "축제 시즌"
+ },
+ {
+  "tag": "먹방",
+  "months": [
+   11,
+   12,
+   1,
+   2
+  ],
+  "multiplier": 1.1,
+  "label": "겨울 먹방 수요"
+ },
+ {
+  "tag": "야경",
+  "months": [
+   12,
+   1
+  ],
+  "multiplier": 1.1,
+  "label": "연말 야경 감성"
+ },
+ {
+  "tag": "로컬",
+  "months": [
+   5,
+   6,
+   9,
+   10
+  ],
+  "multiplier": 1.1,
+  "label": "로컬 브이로그 유행"
+ },
+ {
+  "tag": "사막",
+  "months": [
+   10,
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "multiplier": 1.1,
+  "label": "사막 여행 성수기"
+ },
+ {
+  "tag": "동물",
+  "months": [
+   5,
+   8
+  ],
+  "multiplier": 1.1,
+  "label": "가족·방학 시즌"
+ },
+ {
+  "tag": "커피",
+  "months": [
+   10,
+   11,
+   12
+  ],
+  "multiplier": 1.1,
+  "label": "카페 투어 유행"
+ },
+ {
+  "tag": "별",
+  "months": [
+   8,
+   12,
+   1
+  ],
+  "multiplier": 1.15,
+  "label": "별 보기 여행"
+ },
+ {
+  "tag": "뷰",
+  "months": [
+   4,
+   5,
+   10
+  ],
+  "multiplier": 1.1,
+  "label": "전망 명소 인기"
+ },
+ {
+  "tag": "역사",
+  "months": [
+   9,
+   10
+  ],
+  "multiplier": 1.08,
+  "label": "가을 문화 여행"
+ }
+]
