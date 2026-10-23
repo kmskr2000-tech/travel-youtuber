@@ -292,3 +292,65 @@ test('접근성: 팝업 dialog, 토글 aria-pressed, 슬롯 aria-label', () => {
   assert.ok(byClass(root, 'lodge').every((b) => b.attrs['aria-pressed'] !== undefined));
   assert.ok(byClass(root, 'slot').filter((s) => cls(s, 'empty')).every((s) => s.attrs['aria-label']));
 });
+
+test('플래너: 빈 일정은 확정 불가, 오류 문구 표시', () => {
+  const root = new Node_('div');
+  createApp(root, data, bal, { persist: false, seed: 1 }).nav('planner', { dest: jeju, transport: jeju.transports[0] });
+  assert.ok(byClass(root, 'confirm')[0].attrs.disabled !== undefined);
+  assert.ok(root.textContent.includes('카드를 1개 이상'));
+});
+
+test('플래너: 선택 없이 빈 슬롯 탭은 무시, 체류일 증감 범위', () => {
+  const root = new Node_('div');
+  createApp(root, data, bal, { persist: false, seed: 1 }).nav('planner', { dest: jeju, transport: jeju.transports[0] });
+  byClass(root, 'slot').filter((s) => cls(s, 'empty'))[0].fire('click');
+  assert.equal(byClass(root, 'filled').length, 0);
+  for (let i = 0; i < 10; i++) byClass(root, 'days-inc')[0].fire('click');
+  assert.ok(byClass(root, 'days')[0].textContent.includes('7일'));
+  for (let i = 0; i < 10; i++) byClass(root, 'days-dec')[0].fire('click');
+  assert.ok(byClass(root, 'days')[0].textContent.includes('1일'));
+});
+
+test('번아웃 경로: 촬영 → 쓰러짐 확인 → 결과 → 스튜디오, 게임 계속', () => {
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { persist: false, seed: 4 });
+  app.setState({ ...app.state, stamina: 1 });
+  const plan = pl.placeCard(pl.setDays(pl.emptyPlan(jeju, jeju.transports[0]), 1), jeju, jeju.sights[0].id, 1, 0).plan;
+  app.nav('shoot', { dest: jeju, transport: jeju.transports[0], plan });
+  byClass(root, 'start')[0].fire('click');
+  let g = 0; while (byClass(root, 'choice').length && g++ < 50) byClass(root, 'choice')[0].fire('click');
+  assert.equal(byClass(root, 'commit').length, 1, '번아웃 확인 버튼');
+  byClass(root, 'commit')[0].fire('click');
+  assert.equal(app.route.name, 'result');
+  assert.equal(app.state.videos.length, 0);
+  byClass(root, 'home')[0].fire('click');
+  assert.equal(app.route.name, 'studio');
+  assert.ok(!app.state.over);
+});
+
+test('통합: 전 여행지 헤드리스 한 판 (플래너→촬영→결과)', () => {
+  for (const d of data.destinations) {
+    const root = new Node_('div');
+    const app = createApp(root, data, bal, { persist: false, seed: 21 });
+    app.setState({ ...app.state, cash: 5e8 });
+    const tr = d.transports[0];
+    app.nav('planner', { dest: d, transport: tr });
+    byClass(root, 'pcard').find((p) => p.attrs['data-id'] === d.sights[0].id).fire('click');
+    byClass(root, 'slot').filter((s) => cls(s, 'empty'))[0].fire('click');
+    const conf = byClass(root, 'confirm')[0];
+    assert.equal(conf.attrs.disabled, undefined, `${d.id} 확정 가능`);
+    conf.fire('click');
+    byClass(root, 'start')[0].fire('click');
+    let g = 0; while (byClass(root, 'choice').length && g++ < 50) byClass(root, 'choice')[0].fire('click');
+    (byClass(root, 'upload')[0] ?? byClass(root, 'commit')[0]).fire('click');
+    assert.equal(app.route.name, 'result', d.id);
+  }
+});
+
+test('엔딩 후 지도/플래너 진입 시도도 엔딩으로', () => {
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { persist: false, seed: 1 });
+  app.setState({ ...app.state, over: { type: 'bankrupt', day: 3 } });
+  app.nav('map');
+  assert.equal(app.route.name, 'ending');
+});
