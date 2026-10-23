@@ -29,12 +29,12 @@ export function plannerScreen({ state, bal, dest, transport, plan: initial, nav 
     const cell = g[day - 1][slot];
     const label = `Day${day} ${SLOT_NAMES[slot]}`;
     if (!cell) {
-      return h('button', { class: `slot empty ${selected ? 'target' : ''}`, 'data-day': day, 'data-slot': slot, title: label,
+      return h('button', { class: `slot empty ${selected ? 'target' : ''}`, 'data-day': day, 'data-slot': slot, title: label, 'aria-label': `${label} 빈 슬롯${selected ? ' — 선택한 카드 배치' : ''}`,
         onclick: () => { if (selected) { const id = selected; selected = null; update(placeCard(plan, dest, id, day, slot)); } } }, SLOT_NAMES[slot]);
     }
     if (!cell.head) return h('div', { class: 'slot cont', 'aria-hidden': 'true' }, '↳');
     const c = findCard(dest, cell.cardId);
-    return h('button', { class: `slot filled kind-${c.kind} span${c.slots}`, 'data-day': day, 'data-slot': slot, 'data-id': c.id, title: `${label} · 탭하면 빼기`,
+    return h('button', { class: `slot filled kind-${c.kind} span${c.slots}`, 'data-day': day, 'data-slot': slot, 'data-id': c.id, title: `${label} · 탭하면 빼기`, 'aria-label': `${label} ${c.name} — 누르면 뺍니다`,
       onclick: () => { selected = null; update(removeCard(plan, c.id)); } }, c.name);
   }
 
@@ -59,13 +59,13 @@ export function plannerScreen({ state, bal, dest, transport, plan: initial, nav 
         dest.rentalDayCost ? h('label', {}, h('input', { type: 'checkbox', class: 'rental', checked: plan.rental,
           onchange: (e) => { plan = { ...plan, rental: !plan.rental }; redraw(); } }), ` 렌터카 (${won(dest.rentalDayCost)}/일, 슬롯 보너스)`) : null),
       h('div', { class: 'lodging' }, '숙소 ', LODGINGS.map(([k, name]) =>
-        h('button', { class: `btn lodge ${plan.lodging === k ? 'on' : ''}`, 'data-lodging': k,
+        h('button', { class: `btn lodge ${plan.lodging === k ? 'on' : ''}`, 'data-lodging': k, 'aria-pressed': String(plan.lodging === k),
           onclick: () => { plan = { ...plan, lodging: k }; redraw(); } }, `${name} ${won(dest.lodging?.[k] ?? 0)}`))),
       h('p', { class: 'slotinfo' }, `슬롯 ${pv.slotsUsed}/${pv.slotsAvail} 사용 · 이동 후 남은 칸 기준`),
       h('div', { class: 'pgrid' }, g.map((_, d) => h('div', { class: 'pday' }, h('h5', {}, `Day ${d + 1}`),
         [0, 1, 2].map((s) => slotCell(g, d + 1, s, pv))))),
       h('div', { class: 'ppool' }, KINDS.map((k) => h('div', { class: 'pgroup', 'data-kind': k }, h('h5', {}, KIND_NAME[k]),
-        cardsOf(dest, k).map((c) => h('button', { class: `pcard kind-${k} ${placed.has(c.id) ? 'placed' : ''} ${selected === c.id ? 'sel' : ''}`, 'data-id': c.id,
+        cardsOf(dest, k).map((c) => h('button', { class: `pcard kind-${k} ${placed.has(c.id) ? 'placed' : ''} ${selected === c.id ? 'sel' : ''}`, 'data-id': c.id, 'aria-pressed': String(selected === c.id),
           onclick: () => { selected = selected === c.id ? null : c.id; msg = ''; redraw(); } },
           h('b', {}, `${c.name}${c.slots > 1 ? ` (${c.slots}칸)` : ''}`),
           h('span', {}, `${won(c.cost)} · 점수 ${c.points} · 피로 ${c.fatigue}`),

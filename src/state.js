@@ -27,3 +27,6 @@ export function load(storage = globalThis.localStorage) {
     return s?.schemaVersion === SCHEMA_VERSION ? s : null;
   } catch { return null; }
 }
+export function clearSave(storage = globalThis.localStorage) {
+  try { storage.removeItem(SAVE_KEY); return true; } catch { return false; }
+}

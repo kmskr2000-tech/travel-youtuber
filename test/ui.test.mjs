@@ -204,3 +204,91 @@ test('전 여행지 플래너 렌더 + 자동 일정 확정 가능', () => {
     assert.ok(pv.errors.every((e) => !e.includes('카드 없음')), d.id);
   }
 });
+
+const eco = await import('../src/engine/economy.js');
+test('대출: 빌리기 한도/상환/검증', () => {
+  const s = newState(bal, 1);
+  const avail = eco.availableCredit(s, bal);
+  const b = eco.borrow(s, 1_000_000, bal);
+  assert.equal(b.cash, s.cash + 1_000_000); assert.equal(b.loan, 1_000_000);
+  assert.throws(() => eco.borrow(s, avail + 1, bal), /한도/);
+  assert.throws(() => eco.borrow(s, 0, bal));
+  const r = eco.repay(b, 400_000);
+  assert.equal(r.loan, 600_000); assert.equal(r.cash, b.cash - 400_000);
+  assert.equal(eco.repay(b, 9e9).loan, 0);
+  assert.throws(() => eco.repay(s, 1000), /대출이 없/);
+});
+
+test('대출 UI: 빌리기·상환 버튼 상태 반영', () => {
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { persist: false, seed: 1 });
+  byClass(root, 'loan-amt')[0].value = '500000';
+  byClass(root, 'borrow')[0].fire('click');
+  assert.equal(app.state.loan, 500000);
+  byClass(root, 'loan-amt')[0].value = '200000';
+  byClass(root, 'repay')[0].fire('click');
+  assert.equal(app.state.loan, 300000);
+  byClass(root, 'repay-all')[0].fire('click');
+  assert.equal(app.state.loan, 0);
+  assert.ok(byClass(root, 'repay')[0].attrs.disabled !== undefined, '대출 0이면 상환 비활성');
+});
+
+test('엔딩: 파산/승리 시 엔딩 화면, 새 게임 초기화', () => {
+  for (const [patch, key] of [[{ over: { type: 'bankrupt', day: 40 } }, 'lose'], [{ ended: { type: 'win', day: 300 }, subs: 1_000_000 }, 'win']]) {
+    const root = new Node_('div');
+    const app = createApp(root, data, bal, { persist: false, seed: 1 });
+    app.setState({ ...app.state, ...patch });
+    assert.equal(app.route.name, 'ending');
+    assert.equal(byClass(root, key).length, 1);
+    byClass(root, 'new-game')[0].fire('click');
+    assert.equal(app.route.name, 'studio');
+    assert.equal(app.state.day, 1); assert.equal(app.state.subs, bal.start.subs);
+  }
+});
+
+test('이자로 파산하면 휴식에서 엔딩 진입', () => {
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { persist: false, seed: 1 });
+  const lim = eco.loanLimit(app.state, bal);
+  app.setState({ ...app.state, loan: lim - 1, day: 29 });
+  byClass(root, 'rest')[0].fire('click');
+  assert.equal(app.route.name, 'ending');
+});
+
+test('저장/로드: 새로고침 후 복원, 새 게임은 저장 삭제, 저장 실패 경고', () => {
+  const mem = new Map();
+  const storage = { getItem: (k) => mem.get(k) ?? null, setItem: (k, v) => mem.set(k, v), removeItem: (k) => mem.delete(k) };
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { storage, seed: 5 });
+  byClass(root, 'train-shoot')[0].fire('click');
+  assert.equal(app.state.shootLv, 2);
+  const root2 = new Node_('div');
+  const app2 = createApp(root2, data, bal, { storage, seed: 99 });
+  assert.equal(app2.state.shootLv, 2, '복원');
+  app2.newGame();
+  assert.equal(JSON.parse(mem.get('travel-youtuber:save:v1')).shootLv, 1, '새 게임 저장');
+  const broken = { getItem: () => null, setItem: () => { throw new Error('quota'); }, removeItem: () => {} };
+  const root3 = new Node_('div');
+  const app3 = createApp(root3, data, bal, { storage: broken, seed: 1 });
+  byClass(root3, 'rest')[0].fire('click');
+  assert.equal(app3.saveOk, false);
+  assert.ok(root3.textContent.includes('저장에 실패'));
+});
+
+test('새 게임 2단계 확인', () => {
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { persist: false, seed: 1 });
+  byClass(root, 'train-shoot')[0].fire('click');
+  byClass(root, 'new-game-btn')[0].fire('click');
+  assert.equal(app.state.shootLv, 2, '1단계는 유지');
+  byClass(root, 'confirm-new')[0].fire('click');
+  assert.equal(app.state.shootLv, 1);
+});
+
+test('접근성: 팝업 dialog, 토글 aria-pressed, 슬롯 aria-label', () => {
+  const root = new Node_('div');
+  const app = createApp(root, data, bal, { persist: false, seed: 3 });
+  app.nav('planner', { dest: jeju, transport: jeju.transports[0] });
+  assert.ok(byClass(root, 'lodge').every((b) => b.attrs['aria-pressed'] !== undefined));
+  assert.ok(byClass(root, 'slot').filter((s) => cls(s, 'empty')).every((s) => s.attrs['aria-label']));
+});

@@ -7,4 +7,4 @@
 - 밸런스 시뮬: `node tools/sim.mjs --n 100 [--set conversion=0.10]`
 - 수치: `data/balance.json` (핵심 수치 변경은 승인 후)
 
-현재: M4 완료 (카드 플래너·촬영 진행/이벤트 선택·편집·유튜브식 결과 화면, 한 판 풀 플레이 가능). 실행: 정적 서버로 index.html 서빙 (예: python3 -m http.server).
+현재: M5 완료 (대출/상환 UI, 파산·100만 엔딩 화면, 자동 저장/이어하기/새 게임, 모바일 세로 레이아웃, 접근성, 결과 연출). 실행: 정적 서버로 index.html 서빙 (예: python3 -m http.server).

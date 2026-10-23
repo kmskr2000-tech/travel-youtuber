@@ -13,10 +13,21 @@ export function pay(s, amount, bal) {
   return next;
 }
 
+/** 자발적 대출: 한도(가용 대출) 내에서 현금으로 받음 */
+export function borrow(s, amount, bal) {
+  if (!Number.isFinite(amount) || amount <= 0) throw new Error('금액을 입력하세요');
+  const a = Math.floor(amount);
+  if (a > availableCredit(s, bal)) throw new Error('대출 한도를 넘어요');
+  return { ...s, cash: s.cash + a, loan: s.loan + a };
+}
+
 export const earn = (s, amount) => ({ ...s, cash: s.cash + amount, stats: { ...s.stats, revenue: s.stats.revenue + Math.max(0, amount) } });
 
 export function repay(s, amount) {
-  const a = Math.min(amount, s.cash, s.loan);
+  if (!Number.isFinite(amount) || amount <= 0) throw new Error('금액을 입력하세요');
+  if (s.loan <= 0) throw new Error('갚을 대출이 없어요');
+  if (s.cash <= 0) throw new Error('현금이 없어요');
+  const a = Math.min(Math.floor(amount), s.cash, s.loan);
   return { ...s, cash: s.cash - a, loan: s.loan - a };
 }
 
