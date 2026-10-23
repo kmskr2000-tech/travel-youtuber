@@ -31,7 +31,7 @@ export function transportScreen({ state, bal, dest, nav }) {
         h('dt', {}, '영상 보너스'), h('dd', {}, t.videoBonus ? `+${Math.round(t.videoBonus * 100)}%` : '–')),
       h('div', { class: 'impact', title: '현금+가용 대출 대비 요금 비중' },
         h('i', { style: { width: `${Math.round(imp.ratio * 100)}%` } }), h('span', {}, `예산의 ${Math.round(imp.ratio * 100)}%`)),
-      h('button', { class: 'btn primary pick', disabled: !imp.affordable, onclick: () => nav('stub', { dest, transport: t }) },
+      h('button', { class: 'btn primary pick', disabled: !imp.affordable, onclick: () => nav('planner', { dest, transport: t }) },
         imp.affordable ? '이 수단으로' : '예산 부족'));
   });
   return h('section', { class: 'screen transport-screen' },

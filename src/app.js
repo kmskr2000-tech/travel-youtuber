@@ -1,13 +1,15 @@
-// 라우터: studio → map → transport → stub
+// 라우터: studio → map → transport → planner → shoot → result
 import { h, clear } from './util/h.js';
 import { newState, save, load } from './state.js';
 import { createMetrics } from './ui/metrics.js';
 import { studioScreen } from './ui/studio.js';
 import { mapScreen } from './ui/map.js';
 import { transportScreen } from './ui/transport.js';
-import { stubScreen } from './ui/stub.js';
+import { plannerScreen } from './ui/planner.js';
+import { shootScreen } from './ui/shoot.js';
+import { resultScreen } from './ui/result.js';
 
-const SCREENS = { studio: studioScreen, map: mapScreen, transport: transportScreen, stub: stubScreen };
+const SCREENS = { studio: studioScreen, map: mapScreen, transport: transportScreen, planner: plannerScreen, shoot: shootScreen, result: resultScreen };
 
 export function createApp(root, data, bal, env = {}) {
   let state = (env.persist === false ? null : load(env.storage)) ?? newState(bal, env.seed);
