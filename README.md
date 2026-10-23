@@ -7,4 +7,4 @@
 - 밸런스 시뮬: `node tools/sim.mjs --n 100 [--set conversion=0.10]`
 - 수치: `data/balance.json` (핵심 수치 변경은 승인 후)
 
-현재: M1 (엔진·시뮬레이터) 완료. UI 없음.
+현재: M3 완료 (UI 골격: 지표 바·스튜디오·세계지도·이동수단·스텁 결과). 실행: 정적 서버로 index.html 서빙 (예: python3 -m http.server).
