@@ -4,7 +4,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT" || exit 1
-npm test --silent
+node --test test/*.test.mjs >/dev/null
 REMOTE="$(git remote get-url origin)"
 V="$(date +%s)"
 D="$(mktemp -d)"

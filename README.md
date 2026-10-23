@@ -7,4 +7,4 @@
 - 밸런스 시뮬: `node tools/sim.mjs --n 100 [--set conversion=0.10]`
 - 수치: `data/balance.json` (핵심 수치 변경은 승인 후)
 
-현재: M5 완료 (대출/상환 UI, 파산·100만 엔딩 화면, 자동 저장/이어하기/새 게임, 모바일 세로 레이아웃, 접근성, 결과 연출). 실행: 정적 서버로 index.html 서빙 (예: python3 -m http.server).
+현재: M6 완료 (회귀·단위·UI 통합 테스트 64개, GitHub Pages 배포). 배포: tools/deploy.sh (gh-pages 브랜치, 캐시 무효화 주입). URL: https://kmskr2000-tech.github.io/travel-youtuber/. 로컬 실행: 정적 서버로 index.html 서빙.
