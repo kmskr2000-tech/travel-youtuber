@@ -1,0 +1,7155 @@
+[
+ {
+  "id": "newyork",
+  "name": "뉴욕",
+  "region": "overseas",
+  "country": "US",
+  "continent": "north_america",
+  "subregion": "north-america",
+  "coord": {
+   "lat": 40.7128,
+   "lon": -74.006
+  },
+  "wave": 1,
+  "priceLevel": 5,
+  "popularity": 2.7,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10,
+   12
+  ],
+  "tags": [
+   "도시",
+   "야경",
+   "문화"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→뉴욕(JFK) FSC",
+    "costRoundTrip": 2000000,
+    "durationMin": 840,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "newyork-s1",
+    "name": "자유의 여신상 페리",
+    "cost": 30000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "도시",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "newyork-s2",
+    "name": "엠파이어 스테이트 빌딩 전망대",
+    "cost": 65000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "뷰",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "newyork-s3",
+    "name": "센트럴 파크",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "newyork-s4",
+    "name": "메트로폴리탄 미술관",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "문화"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "newyork-a1",
+    "name": "브로드웨이 뮤지컬 관람",
+    "cost": 200000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "문화",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "newyork-a2",
+    "name": "서클라인 맨해튼 크루즈",
+    "cost": 70000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "newyork-f1",
+    "name": "뉴욕 피자 슬라이스",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "newyork-f2",
+    "name": "뉴욕 베이글 + 락스",
+    "cost": 18000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "newyork-f3",
+    "name": "스테이크 하우스",
+    "cost": 120000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "losangeles",
+  "name": "로스앤젤레스",
+  "region": "overseas",
+  "country": "US",
+  "continent": "north_america",
+  "subregion": "north-america",
+  "coord": {
+   "lat": 34.0522,
+   "lon": -118.2437
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.4,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "도시",
+   "바다",
+   "엔터"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→LA FSC",
+    "costRoundTrip": 1700000,
+    "durationMin": 660,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "losangeles-s1",
+    "name": "그리피스 천문대(할리우드 사인 뷰)",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "losangeles-s2",
+    "name": "산타모니카 피어",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "losangeles-s3",
+    "name": "베니스 비치",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "losangeles-s4",
+    "name": "게티 센터",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "문화",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "losangeles-a1",
+    "name": "유니버설 스튜디오 할리우드",
+    "cost": 160000,
+    "slots": 3,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "테마파크"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "losangeles-a2",
+    "name": "디즈니랜드 리조트",
+    "cost": 190000,
+    "slots": 3,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "테마파크"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "losangeles-f1",
+    "name": "인앤아웃 버거",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "losangeles-f2",
+    "name": "타코 트럭",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "losangeles-f3",
+    "name": "LA 브런치",
+    "cost": 30000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 90000
+ },
+ {
+  "id": "honolulu",
+  "name": "호놀룰루(하와이)",
+  "region": "overseas",
+  "country": "US",
+  "continent": "north_america",
+  "subregion": "pacific",
+  "coord": {
+   "lat": 21.3069,
+   "lon": -157.8583
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.4,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "바다",
+   "휴양",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→호놀룰루 FSC",
+    "costRoundTrip": 1300000,
+    "durationMin": 510,
+    "fatigue": 18,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "honolulu-s1",
+    "name": "다이아몬드 헤드 트레일",
+    "cost": 8000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "honolulu-s2",
+    "name": "와이키키 해변",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "honolulu-s3",
+    "name": "진주만 USS 애리조나 기념관",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "honolulu-s4",
+    "name": "노스쇼어 거북이 해변",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "honolulu-a1",
+    "name": "와이키키 서핑 강습",
+    "cost": 90000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "액티비티",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "honolulu-a2",
+    "name": "하나우마 베이 스노클링",
+    "cost": 50000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "바다",
+     "액티비티"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "honolulu-f1",
+    "name": "포케 볼",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "honolulu-f2",
+    "name": "갈릭 쉬림프 푸드트럭",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "honolulu-f3",
+    "name": "로코모코",
+    "cost": 18000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 90000
+ },
+ {
+  "id": "vancouver",
+  "name": "밴쿠버",
+  "region": "overseas",
+  "country": "CA",
+  "continent": "north_america",
+  "subregion": "north-america",
+  "coord": {
+   "lat": 49.2827,
+   "lon": -123.1207
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.3,
+  "bestSeason": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "tags": [
+   "자연",
+   "도시",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→밴쿠버 FSC",
+    "costRoundTrip": 1700000,
+    "durationMin": 630,
+    "fatigue": 21,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "vancouver-s1",
+    "name": "스탠리 파크",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "vancouver-s2",
+    "name": "캐필라노 현수교 공원",
+    "cost": 60000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "vancouver-s3",
+    "name": "그랜빌 아일랜드 마켓",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "먹방"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "vancouver-s4",
+    "name": "개스타운 증기 시계",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "도시",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "vancouver-a1",
+    "name": "휘슬러 피크투피크 곤돌라",
+    "cost": 80000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "vancouver-a2",
+    "name": "고래 관찰 투어",
+    "cost": 150000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "바다",
+     "액티비티"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "vancouver-f1",
+    "name": "푸틴",
+    "cost": 12000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "vancouver-f2",
+    "name": "연어 요리",
+    "cost": 35000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "vancouver-f3",
+    "name": "시푸드 플래터",
+    "cost": 50000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 80000
+ },
+ {
+  "id": "cusco",
+  "name": "쿠스코(마추픽추)",
+  "region": "overseas",
+  "country": "PE",
+  "continent": "south_america",
+  "subregion": "south-america",
+  "coord": {
+   "lat": -13.5319,
+   "lon": -71.9675
+  },
+  "wave": 1,
+  "priceLevel": 1,
+  "popularity": 2.6,
+  "bestSeason": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "tags": [
+   "역사",
+   "자연",
+   "체험"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→리마 경유→쿠스코 FSC",
+    "costRoundTrip": 3200000,
+    "durationMin": 1800,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "cusco-s1",
+    "name": "마추픽추(기차+입장)",
+    "cost": 260000,
+    "slots": 3,
+    "points": 10,
+    "fatigue": 16,
+    "tags": [
+     "역사",
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cusco-s2",
+    "name": "삭사이와만",
+    "cost": 7000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cusco-s3",
+    "name": "코리칸차(태양의 신전)",
+    "cost": 5000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cusco-s4",
+    "name": "아르마스 광장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "도시",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "cusco-a1",
+    "name": "성스러운 계곡 투어(오얀타이탐보·피삭)",
+    "cost": 40000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "역사",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cusco-a2",
+    "name": "무지개산(비니쿤카) 트레킹",
+    "cost": 60000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 17,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "cusco-f1",
+    "name": "세비체",
+    "cost": 15000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cusco-f2",
+    "name": "알파카 스테이크",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cusco-f3",
+    "name": "쿠이(기니피그) 구이",
+    "cost": 35000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "rio",
+  "name": "리우데자네이루",
+  "region": "overseas",
+  "country": "BR",
+  "continent": "south_america",
+  "subregion": "south-america",
+  "coord": {
+   "lat": -22.9068,
+   "lon": -43.1729
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 2.5,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "바다",
+   "도시",
+   "축제"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→리우 경유 FSC",
+    "costRoundTrip": 3000000,
+    "durationMin": 1800,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "rio-s1",
+    "name": "코르코바도 예수상",
+    "cost": 40000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "뷰",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rio-s2",
+    "name": "코파카바나 해변",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rio-s3",
+    "name": "슈가로프 산 케이블카",
+    "cost": 40000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "뷰",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rio-s4",
+    "name": "셀라론 계단",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "rio-a1",
+    "name": "삼바 쇼 관람",
+    "cost": 80000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "문화",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rio-a2",
+    "name": "패러글라이딩(페드라 보니타)",
+    "cost": 120000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "rio-f1",
+    "name": "슈하스코(브라질 바비큐)",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rio-f2",
+    "name": "페이조아다",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rio-f3",
+    "name": "아사이볼",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "uyuni",
+  "name": "라파스·우유니",
+  "region": "overseas",
+  "country": "BO",
+  "continent": "south_america",
+  "subregion": "south-america",
+  "coord": {
+   "lat": -20.4637,
+   "lon": -66.8251
+  },
+  "wave": 1,
+  "priceLevel": 1,
+  "popularity": 2.6,
+  "bestSeason": [
+   1,
+   2,
+   3,
+   7,
+   8
+  ],
+  "tags": [
+   "자연",
+   "사막",
+   "뷰"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→라파스 경유→우유니 FSC",
+    "costRoundTrip": 3300000,
+    "durationMin": 2000,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "uyuni-s1",
+    "name": "라파스 텔레페리코(케이블카)",
+    "cost": 3000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "도시",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "uyuni-s2",
+    "name": "달의 계곡",
+    "cost": 5000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "uyuni-s3",
+    "name": "마녀 시장",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "uyuni-s4",
+    "name": "우유니 열차 무덤",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사",
+     "사막"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "uyuni-a1",
+    "name": "우유니 소금사막 일몰·별 투어",
+    "cost": 90000,
+    "slots": 2,
+    "points": 10,
+    "fatigue": 14,
+    "tags": [
+     "자연",
+     "사막"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "uyuni-a2",
+    "name": "와이나 포토시 트레킹",
+    "cost": 130000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 18,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "uyuni-f1",
+    "name": "살테냐",
+    "cost": 5000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "uyuni-f2",
+    "name": "퀴노아 수프",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "uyuni-f3",
+    "name": "라마 스테이크",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "sydney",
+  "name": "시드니",
+  "region": "overseas",
+  "country": "AU",
+  "continent": "oceania",
+  "subregion": "oceania-pacific",
+  "coord": {
+   "lat": -33.8688,
+   "lon": 151.2093
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.4,
+  "bestSeason": [
+   10,
+   11,
+   3,
+   4
+  ],
+  "tags": [
+   "도시",
+   "바다",
+   "야경"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→시드니 FSC",
+    "costRoundTrip": 1500000,
+    "durationMin": 630,
+    "fatigue": 21,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "sydney-s1",
+    "name": "시드니 오페라 하우스 투어",
+    "cost": 55000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "건축",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sydney-s2",
+    "name": "하버 브리지 파일론 전망대",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sydney-s3",
+    "name": "본다이 비치",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sydney-s4",
+    "name": "로열 보타닉 가든",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "sydney-a1",
+    "name": "블루 마운틴 당일 투어",
+    "cost": 100000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sydney-a2",
+    "name": "시드니 하버 디너 크루즈",
+    "cost": 130000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "야경",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "sydney-f1",
+    "name": "미트 파이",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sydney-f2",
+    "name": "피시 앤 칩스",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sydney-f3",
+    "name": "플랫 화이트 카페",
+    "cost": 5000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 80000
+ },
+ {
+  "id": "queenstown",
+  "name": "퀸스타운",
+  "region": "overseas",
+  "country": "NZ",
+  "continent": "oceania",
+  "subregion": "oceania-pacific",
+  "coord": {
+   "lat": -45.0312,
+   "lon": 168.6626
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.3,
+  "bestSeason": [
+   12,
+   1,
+   2,
+   3
+  ],
+  "tags": [
+   "자연",
+   "액티비티",
+   "뷰"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→오클랜드 경유→퀸스타운 FSC",
+    "costRoundTrip": 2200000,
+    "durationMin": 1020,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "queenstown-s1",
+    "name": "스카이라인 곤돌라",
+    "cost": 50000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "queenstown-s2",
+    "name": "와카티푸 호수",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "queenstown-s3",
+    "name": "밀포드 사운드 크루즈(버스 포함)",
+    "cost": 200000,
+    "slots": 3,
+    "points": 10,
+    "fatigue": 12,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "queenstown-s4",
+    "name": "애로타운",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "queenstown-a1",
+    "name": "카와라우 번지점프",
+    "cost": 230000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 16,
+    "tags": [
+     "액티비티"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "queenstown-a2",
+    "name": "쇼타오버 제트보트",
+    "cost": 120000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "액티비티",
+     "자연"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "queenstown-f1",
+    "name": "퍼그버거",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "queenstown-f2",
+    "name": "뉴질랜드 양고기",
+    "cost": 35000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "queenstown-f3",
+    "name": "그린쉘 홍합",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 80000
+ },
+ {
+  "id": "guam",
+  "name": "괌",
+  "region": "overseas",
+  "country": "GU",
+  "continent": "oceania",
+  "subregion": "oceania-pacific",
+  "coord": {
+   "lat": 13.4443,
+   "lon": 144.7937
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.9,
+  "bestSeason": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "tags": [
+   "바다",
+   "휴양",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→괌 FSC",
+    "costRoundTrip": 600000,
+    "durationMin": 240,
+    "fatigue": 10,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "lcc",
+    "name": "인천→괌 LCC",
+    "costRoundTrip": 450000,
+    "durationMin": 240,
+    "fatigue": 10,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "guam-s1",
+    "name": "사랑의 절벽",
+    "cost": 5000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "guam-s2",
+    "name": "투몬 비치",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "guam-s3",
+    "name": "이파오 비치",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "guam-s4",
+    "name": "리티디안 포인트",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "guam-a1",
+    "name": "스노클링·씨워크 투어",
+    "cost": 90000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "바다",
+     "액티비티"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "guam-a2",
+    "name": "돌고래 와칭 투어",
+    "cost": 70000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "바다",
+     "자연"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "guam-f1",
+    "name": "차모로 BBQ",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "guam-f2",
+    "name": "차모로 정식",
+    "cost": 35000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "guam-f3",
+    "name": "괌 해산물 플래터",
+    "cost": 45000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 70000
+ },
+ {
+  "id": "tokyo",
+  "name": "도쿄",
+  "region": "overseas",
+  "country": "JP",
+  "continent": "asia",
+  "subregion": "northeast-asia",
+  "coord": {
+   "lat": 35.6762,
+   "lon": 139.6503
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.9,
+  "bestSeason": [
+   3,
+   4,
+   10,
+   11
+  ],
+  "tags": [
+   "도시",
+   "먹방",
+   "벚꽃"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "인천→도쿄(나리타) LCC",
+    "costRoundTrip": 300000,
+    "durationMin": 140,
+    "fatigue": 8,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "fsc",
+    "name": "인천→도쿄(하네다) FSC",
+    "costRoundTrip": 450000,
+    "durationMin": 140,
+    "fatigue": 8,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "tokyo-s1",
+    "name": "센소지(아사쿠사)",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tokyo-s2",
+    "name": "시부야 스카이 전망대",
+    "cost": 20000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tokyo-s3",
+    "name": "메이지 신궁",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사",
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tokyo-s4",
+    "name": "도쿄 스카이트리 전망대",
+    "cost": 29000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "tokyo-a1",
+    "name": "팀랩 플래닛 도쿄",
+    "cost": 38000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "체험",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tokyo-a2",
+    "name": "도쿄 디즈니씨",
+    "cost": 80000,
+    "slots": 3,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "테마파크"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "tokyo-f1",
+    "name": "츠키지 장외시장 스시",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tokyo-f2",
+    "name": "이치란 라멘",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tokyo-f3",
+    "name": "이자카야 한 끼",
+    "cost": 40000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "osaka",
+  "name": "오사카",
+  "region": "overseas",
+  "country": "JP",
+  "continent": "asia",
+  "subregion": "northeast-asia",
+  "coord": {
+   "lat": 34.6937,
+   "lon": 135.5023
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.9,
+  "bestSeason": [
+   3,
+   4,
+   10,
+   11
+  ],
+  "tags": [
+   "먹방",
+   "도시",
+   "벚꽃"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "인천→오사카(간사이) LCC",
+    "costRoundTrip": 280000,
+    "durationMin": 130,
+    "fatigue": 7,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "fsc",
+    "name": "인천→오사카(간사이) FSC",
+    "costRoundTrip": 420000,
+    "durationMin": 130,
+    "fatigue": 7,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "osaka-s1",
+    "name": "오사카성 천수각",
+    "cost": 6000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "osaka-s2",
+    "name": "도톤보리",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "먹방",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "osaka-s3",
+    "name": "신세카이 츠텐카쿠",
+    "cost": 7000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "osaka-s4",
+    "name": "가이유칸 수족관",
+    "cost": 23000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "osaka-a1",
+    "name": "유니버설 스튜디오 재팬",
+    "cost": 85000,
+    "slots": 3,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "테마파크"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "osaka-a2",
+    "name": "도톤보리 리버크루즈",
+    "cost": 9000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "osaka-f1",
+    "name": "타코야키",
+    "cost": 8000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "osaka-f2",
+    "name": "쿠시카츠",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "osaka-f3",
+    "name": "오코노미야키",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "taipei",
+  "name": "타이베이",
+  "region": "overseas",
+  "country": "TW",
+  "continent": "asia",
+  "subregion": "northeast-asia",
+  "coord": {
+   "lat": 25.033,
+   "lon": 121.5654
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 1.7,
+  "bestSeason": [
+   3,
+   4,
+   10,
+   11
+  ],
+  "tags": [
+   "먹방",
+   "야경",
+   "도시"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "인천→타이베이(타오위안) LCC",
+    "costRoundTrip": 280000,
+    "durationMin": 155,
+    "fatigue": 8,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "taipei-s1",
+    "name": "타이베이 101 전망대",
+    "cost": 26000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "taipei-s2",
+    "name": "지우펀 홍등 거리",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "야경",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "taipei-s3",
+    "name": "중정기념당",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "taipei-s4",
+    "name": "용산사",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "taipei-a1",
+    "name": "예류 지질공원·스펀 천등 버스투어",
+    "cost": 45000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "자연",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "taipei-a2",
+    "name": "마오콩 곤돌라·차 문화 체험",
+    "cost": 25000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "자연",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "taipei-f1",
+    "name": "딘타이펑 샤오롱바오",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "taipei-f2",
+    "name": "우육면",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "taipei-f3",
+    "name": "스린 야시장 간식",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "bangkok",
+  "name": "방콕",
+  "region": "overseas",
+  "country": "TH",
+  "continent": "asia",
+  "subregion": "southeast-asia",
+  "coord": {
+   "lat": 13.7563,
+   "lon": 100.5018
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 1.9,
+  "bestSeason": [
+   11,
+   12,
+   1,
+   2
+  ],
+  "tags": [
+   "먹방",
+   "도시",
+   "야경"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "인천→방콕(수완나품) LCC",
+    "costRoundTrip": 450000,
+    "durationMin": 330,
+    "fatigue": 13,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "fsc",
+    "name": "인천→방콕(수완나품) FSC",
+    "costRoundTrip": 650000,
+    "durationMin": 330,
+    "fatigue": 13,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "bangkok-s1",
+    "name": "왕궁·에메랄드 사원",
+    "cost": 19000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bangkok-s2",
+    "name": "왓 아룬",
+    "cost": 4000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bangkok-s3",
+    "name": "짜뚜짝 주말시장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bangkok-s4",
+    "name": "카오산로드",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "야경",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "bangkok-a1",
+    "name": "아유타야 유적 당일 투어",
+    "cost": 50000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "역사",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bangkok-a2",
+    "name": "짜오프라야강 디너크루즈",
+    "cost": 60000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "bangkok-f1",
+    "name": "팟타이·길거리 음식",
+    "cost": 5000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bangkok-f2",
+    "name": "똠얌꿍 정식",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bangkok-f3",
+    "name": "망고 찰밥",
+    "cost": 4000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "danang",
+  "name": "다낭",
+  "region": "overseas",
+  "country": "VN",
+  "continent": "asia",
+  "subregion": "southeast-asia",
+  "coord": {
+   "lat": 16.0544,
+   "lon": 108.2022
+  },
+  "wave": 1,
+  "priceLevel": 1,
+  "popularity": 1.8,
+  "bestSeason": [
+   3,
+   4,
+   5,
+   8
+  ],
+  "tags": [
+   "바다",
+   "먹방",
+   "휴양"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "인천→다낭 LCC",
+    "costRoundTrip": 400000,
+    "durationMin": 290,
+    "fatigue": 12,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "danang-s1",
+    "name": "바나힐 골든브릿지",
+    "cost": 45000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "뷰",
+     "테마파크"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "danang-s2",
+    "name": "오행산",
+    "cost": 5000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "danang-s3",
+    "name": "미케비치",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "danang-s4",
+    "name": "호이안 올드타운",
+    "cost": 5000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "야경",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "danang-a1",
+    "name": "호이안 소원등 보트 체험",
+    "cost": 10000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "danang-a2",
+    "name": "호이안 쿠킹클래스",
+    "cost": 35000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "체험",
+     "먹방"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "danang-f1",
+    "name": "반미",
+    "cost": 3000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "danang-f2",
+    "name": "미꽝(다낭식 국수)",
+    "cost": 6000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "danang-f3",
+    "name": "해산물 구이",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "bali",
+  "name": "발리",
+  "region": "overseas",
+  "country": "ID",
+  "continent": "asia",
+  "subregion": "southeast-asia",
+  "coord": {
+   "lat": -8.4095,
+   "lon": 115.1889
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 2.1,
+  "bestSeason": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "tags": [
+   "바다",
+   "휴양",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→덴파사르 FSC",
+    "costRoundTrip": 1000000,
+    "durationMin": 450,
+    "fatigue": 16,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "bali-s1",
+    "name": "우붓 몽키포레스트",
+    "cost": 8000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bali-s2",
+    "name": "울루와뚜 사원",
+    "cost": 8000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bali-s3",
+    "name": "따나롯 사원",
+    "cost": 10000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "바다",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bali-s4",
+    "name": "뜨갈랄랑 라이스테라스",
+    "cost": 3000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "bali-a1",
+    "name": "쿠타 서핑 강습",
+    "cost": 40000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "액티비티",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bali-a2",
+    "name": "바투르산 일출 트레킹",
+    "cost": 70000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 17,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "bali-f1",
+    "name": "나시고렝·미고렝",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bali-f2",
+    "name": "바비굴링(돼지구이)",
+    "cost": 10000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "bali-f3",
+    "name": "우붓 카페 브런치",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "singapore",
+  "name": "싱가포르",
+  "region": "overseas",
+  "country": "SG",
+  "continent": "asia",
+  "subregion": "southeast-asia",
+  "coord": {
+   "lat": 1.3521,
+   "lon": 103.8198
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 1.9,
+  "bestSeason": [
+   2,
+   3,
+   7,
+   8
+  ],
+  "tags": [
+   "도시",
+   "야경",
+   "먹방"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "인천→싱가포르 LCC",
+    "costRoundTrip": 480000,
+    "durationMin": 405,
+    "fatigue": 15,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "fsc",
+    "name": "인천→싱가포르 FSC",
+    "costRoundTrip": 750000,
+    "durationMin": 405,
+    "fatigue": 15,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "singapore-s1",
+    "name": "마리나베이 샌즈 스카이파크",
+    "cost": 30000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "singapore-s2",
+    "name": "가든스 바이 더 베이",
+    "cost": 45000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "자연",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "singapore-s3",
+    "name": "머라이언 파크",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "singapore-s4",
+    "name": "차이나타운 사원·거리",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "singapore-a1",
+    "name": "나이트 사파리",
+    "cost": 60000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "체험",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "singapore-a2",
+    "name": "센토사 유니버설 스튜디오 싱가포르",
+    "cost": 85000,
+    "slots": 3,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "테마파크"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "singapore-f1",
+    "name": "하이난 치킨라이스(호커센터)",
+    "cost": 7000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "singapore-f2",
+    "name": "칠리크랩",
+    "cost": 80000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "singapore-f3",
+    "name": "카야토스트 세트",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "dubai",
+  "name": "두바이",
+  "region": "overseas",
+  "country": "AE",
+  "continent": "asia",
+  "subregion": "middle-east",
+  "coord": {
+   "lat": 25.2048,
+   "lon": 55.2708
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.2,
+  "bestSeason": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "tags": [
+   "도시",
+   "사막",
+   "야경"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→두바이 FSC",
+    "costRoundTrip": 1300000,
+    "durationMin": 620,
+    "fatigue": 21,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "dubai-s1",
+    "name": "부르즈 할리파 전망대",
+    "cost": 80000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "dubai-s2",
+    "name": "두바이몰 분수쇼",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "야경",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "dubai-s3",
+    "name": "팜 주메이라 전망",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "뷰",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "dubai-s4",
+    "name": "올드 두바이·골드 수크",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "dubai-a1",
+    "name": "사막 사파리(사구 드라이빙·BBQ)",
+    "cost": 70000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "사막",
+     "액티비티"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "dubai-a2",
+    "name": "두바이 마리나 요트 크루즈",
+    "cost": 90000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "바다",
+     "야경"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "dubai-f1",
+    "name": "샤와르마",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "dubai-f2",
+    "name": "중동식 모둠 한상",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "dubai-f3",
+    "name": "대추야자·카페 디저트",
+    "cost": 10000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "istanbul",
+  "name": "이스탄불",
+  "region": "overseas",
+  "country": "TR",
+  "continent": "asia",
+  "subregion": "middle-east",
+  "coord": {
+   "lat": 41.0082,
+   "lon": 28.9784
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 2.3,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "역사",
+   "도시",
+   "먹방"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→이스탄불 FSC",
+    "costRoundTrip": 1400000,
+    "durationMin": 700,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "istanbul-s1",
+    "name": "아야 소피아",
+    "cost": 37000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "istanbul-s2",
+    "name": "블루 모스크",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "istanbul-s3",
+    "name": "톱카프 궁전",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "istanbul-s4",
+    "name": "갈라타 탑",
+    "cost": 20000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "istanbul-a1",
+    "name": "보스포루스 해협 크루즈",
+    "cost": 20000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "istanbul-a2",
+    "name": "터키식 목욕탕(하맘) 체험",
+    "cost": 60000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "istanbul-f1",
+    "name": "고등어 케밥(발륵 에크멕)",
+    "cost": 8000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "istanbul-f2",
+    "name": "모둠 케밥",
+    "cost": 20000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "istanbul-f3",
+    "name": "차이·터키 디저트",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "seoul",
+  "name": "서울",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 37.5665,
+   "lon": 126.978
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "도시",
+   "역사",
+   "먹방"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "bus",
+    "name": "자택→서울 시내 대중교통",
+    "costRoundTrip": 20000,
+    "durationMin": 60,
+    "fatigue": 6,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "seoul-s1",
+    "name": "경복궁",
+    "cost": 3000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "seoul-s2",
+    "name": "북촌한옥마을",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "seoul-s3",
+    "name": "창덕궁 후원",
+    "cost": 8000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사",
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "seoul-s4",
+    "name": "N서울타워 전망대",
+    "cost": 16000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "seoul-a1",
+    "name": "한복 체험 + 고궁 산책",
+    "cost": 25000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "역사",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "seoul-a2",
+    "name": "한강 유람선(이랜드크루즈)",
+    "cost": 20000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "뷰",
+     "야경"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "seoul-f1",
+    "name": "광장시장 빈대떡·마약김밥",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "seoul-f2",
+    "name": "서울 한우 구이",
+    "cost": 60000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "seoul-f3",
+    "name": "망원시장 먹거리",
+    "cost": 12000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "busan",
+  "name": "부산",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 35.1796,
+   "lon": 129.0756
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.2,
+  "bestSeason": [
+   5,
+   6,
+   9,
+   10
+  ],
+  "tags": [
+   "바다",
+   "도시",
+   "먹방"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "ktx",
+    "name": "서울→부산 KTX",
+    "costRoundTrip": 120000,
+    "durationMin": 160,
+    "fatigue": 8,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "lcc",
+    "name": "김포→김해 LCC",
+    "costRoundTrip": 100000,
+    "durationMin": 65,
+    "fatigue": 6,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "busan-s1",
+    "name": "감천문화마을",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "로컬",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "busan-s2",
+    "name": "해운대 해수욕장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "busan-s3",
+    "name": "해동용궁사",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "busan-s4",
+    "name": "광안대교 야경 포인트",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "야경",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "busan-a1",
+    "name": "해운대 블루라인파크 해변열차·스카이캡슐",
+    "cost": 30000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "busan-a2",
+    "name": "송도해상케이블카",
+    "cost": 20000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "busan-f1",
+    "name": "돼지국밥",
+    "cost": 10000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "busan-f2",
+    "name": "자갈치시장 회",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "busan-f3",
+    "name": "부산 씨앗호떡·비빔당면",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 70000
+ },
+ {
+  "id": "jeju",
+  "name": "제주도",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 33.4996,
+   "lon": 126.5312
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.4,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "자연",
+   "바다",
+   "먹방"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "lcc",
+    "name": "김포→제주 LCC",
+    "costRoundTrip": 130000,
+    "durationMin": 75,
+    "fatigue": 6,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "fsc",
+    "name": "김포→제주 FSC",
+    "costRoundTrip": 180000,
+    "durationMin": 75,
+    "fatigue": 6,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "jeju-s1",
+    "name": "성산일출봉",
+    "cost": 5000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeju-s2",
+    "name": "만장굴",
+    "cost": 4000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeju-s3",
+    "name": "협재해수욕장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeju-s4",
+    "name": "한라산 영실코스",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 16,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "jeju-a1",
+    "name": "우도 전기자전거 일주",
+    "cost": 25000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "액티비티",
+     "섬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeju-a2",
+    "name": "서귀포 해안 요트투어",
+    "cost": 70000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "바다",
+     "액티비티"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "jeju-f1",
+    "name": "제주 흑돼지 구이",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeju-f2",
+    "name": "고기국수",
+    "cost": 10000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeju-f3",
+    "name": "성게미역국",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 70000
+ },
+ {
+  "id": "gangneung",
+  "name": "강릉",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 37.7519,
+   "lon": 128.8761
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.2,
+  "bestSeason": [
+   6,
+   7,
+   8,
+   10
+  ],
+  "tags": [
+   "바다",
+   "커피",
+   "먹방"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "ktx",
+    "name": "서울→강릉 KTX-이음",
+    "costRoundTrip": 56000,
+    "durationMin": 120,
+    "fatigue": 7,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "bus",
+    "name": "서울→강릉 고속버스",
+    "costRoundTrip": 40000,
+    "durationMin": 170,
+    "fatigue": 9,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "gangneung-s1",
+    "name": "경포해변·경포대",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gangneung-s2",
+    "name": "정동진 해변",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gangneung-s3",
+    "name": "오죽헌",
+    "cost": 3000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gangneung-s4",
+    "name": "안목해변 커피거리",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "커피",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "gangneung-a1",
+    "name": "정동심곡 바다부채길 트레킹",
+    "cost": 3000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gangneung-a2",
+    "name": "서핑 강습(강릉 사천해변)",
+    "cost": 60000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "액티비티",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "gangneung-f1",
+    "name": "초당순두부",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gangneung-f2",
+    "name": "강릉 물회",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gangneung-f3",
+    "name": "장칼국수",
+    "cost": 9000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 70000
+ },
+ {
+  "id": "gyeongju",
+  "name": "경주",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 35.8562,
+   "lon": 129.2247
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1,
+  "bestSeason": [
+   4,
+   5,
+   10,
+   11
+  ],
+  "tags": [
+   "역사",
+   "야경",
+   "벚꽃"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "ktx",
+    "name": "서울→신경주 KTX",
+    "costRoundTrip": 96000,
+    "durationMin": 125,
+    "fatigue": 7,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "gyeongju-s1",
+    "name": "불국사",
+    "cost": 6000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gyeongju-s2",
+    "name": "석굴암",
+    "cost": 6000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gyeongju-s3",
+    "name": "동궁과 월지(안압지)",
+    "cost": 3000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "야경",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gyeongju-s4",
+    "name": "대릉원(천마총)",
+    "cost": 3000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "gyeongju-a1",
+    "name": "첨성대·황리단길 자전거 투어",
+    "cost": 15000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "체험",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gyeongju-a2",
+    "name": "한복 체험(황리단길)",
+    "cost": 25000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "역사",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "gyeongju-f1",
+    "name": "황리단길 경주빵",
+    "cost": 10000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gyeongju-f2",
+    "name": "쌈밥 한정식",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "gyeongju-f3",
+    "name": "교리김밥",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 60000
+ },
+ {
+  "id": "jeonju",
+  "name": "전주",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 35.8242,
+   "lon": 127.148
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1,
+  "bestSeason": [
+   4,
+   5,
+   10,
+   11
+  ],
+  "tags": [
+   "먹방",
+   "역사",
+   "로컬"
+  ],
+  "recommendedDays": [
+   2,
+   2
+  ],
+  "transports": [
+   {
+    "mode": "ktx",
+    "name": "용산→전주 KTX",
+    "costRoundTrip": 66000,
+    "durationMin": 105,
+    "fatigue": 7,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   },
+   {
+    "mode": "bus",
+    "name": "서울→전주 고속버스",
+    "costRoundTrip": 38000,
+    "durationMin": 165,
+    "fatigue": 8,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "jeonju-s1",
+    "name": "전주한옥마을",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeonju-s2",
+    "name": "경기전",
+    "cost": 3000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeonju-s3",
+    "name": "전동성당",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeonju-s4",
+    "name": "남부시장 야시장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "먹방",
+     "야경"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "jeonju-a1",
+    "name": "한복 체험(한옥마을)",
+    "cost": 20000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "역사",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeonju-a2",
+    "name": "전주 막걸리 골목 투어",
+    "cost": 25000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "로컬",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "jeonju-f1",
+    "name": "전주비빔밥",
+    "cost": 14000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeonju-f2",
+    "name": "콩나물국밥",
+    "cost": 9000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "jeonju-f3",
+    "name": "한옥마을 길거리 먹거리",
+    "cost": 12000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "yeosu",
+  "name": "여수",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 34.7604,
+   "lon": 127.6622
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.1,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "바다",
+   "야경",
+   "먹방"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "ktx",
+    "name": "용산→여수엑스포 KTX",
+    "costRoundTrip": 94000,
+    "durationMin": 175,
+    "fatigue": 9,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "yeosu-s1",
+    "name": "오동도",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "yeosu-s2",
+    "name": "향일암",
+    "cost": 3000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "yeosu-s3",
+    "name": "여수 낭만포차 거리",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "야경",
+     "먹방"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "yeosu-s4",
+    "name": "돌산공원·돌산대교 야경",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "야경",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "yeosu-a1",
+    "name": "여수 해상케이블카",
+    "cost": 17000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "yeosu-a2",
+    "name": "유람선 야경 투어(여수밤바다)",
+    "cost": 20000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "야경",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "yeosu-f1",
+    "name": "게장백반",
+    "cost": 15000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "yeosu-f2",
+    "name": "삼합(한우·키조개·표고)",
+    "cost": 45000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "yeosu-f3",
+    "name": "갓김치 정식",
+    "cost": 12000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 65000
+ },
+ {
+  "id": "sokcho",
+  "name": "속초(설악산)",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 38.207,
+   "lon": 128.5918
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.1,
+  "bestSeason": [
+   5,
+   7,
+   10
+  ],
+  "tags": [
+   "자연",
+   "바다",
+   "먹방"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "bus",
+    "name": "서울→속초 고속버스",
+    "costRoundTrip": 42000,
+    "durationMin": 160,
+    "fatigue": 8,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "sokcho-s1",
+    "name": "설악산 국립공원 케이블카·권금성",
+    "cost": 15000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sokcho-s2",
+    "name": "속초해변",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sokcho-s3",
+    "name": "영금정",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sokcho-s4",
+    "name": "아바이마을·갯배",
+    "cost": 1000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "sokcho-a1",
+    "name": "울산바위 트레킹",
+    "cost": 0,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 16,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sokcho-a2",
+    "name": "속초 항공 레저·스카이워크(설악)",
+    "cost": 40000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "액티비티",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "sokcho-f1",
+    "name": "속초 중앙시장 닭강정",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sokcho-f2",
+    "name": "대게 정식",
+    "cost": 80000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "sokcho-f3",
+    "name": "아바이순대·오징어순대",
+    "cost": 15000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 70000
+ },
+ {
+  "id": "ulleungdo",
+  "name": "울릉도",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 37.4844,
+   "lon": 130.9057
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 1.3,
+  "bestSeason": [
+   5,
+   6,
+   9
+  ],
+  "tags": [
+   "섬",
+   "자연",
+   "바다"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "ferry",
+    "name": "서울→강릉(KTX)→묵호항→울릉도 도동항 페리",
+    "costRoundTrip": 195000,
+    "durationMin": 330,
+    "fatigue": 13,
+    "videoBonus": 0.1,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "ulleungdo-s1",
+    "name": "독도 전망대·케이블카",
+    "cost": 12000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "섬",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "ulleungdo-s2",
+    "name": "나리분지",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "ulleungdo-s3",
+    "name": "봉래폭포",
+    "cost": 1000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "ulleungdo-s4",
+    "name": "관음도·저동 촛대바위",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "ulleungdo-a1",
+    "name": "독도 관광선 승선(입도 여부 날씨 의존)",
+    "cost": 70000,
+    "slots": 3,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "섬",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "ulleungdo-a2",
+    "name": "울릉도 일주 유람선",
+    "cost": 30000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "섬",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "ulleungdo-f1",
+    "name": "오징어내장탕",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "ulleungdo-f2",
+    "name": "명이나물 한상",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "ulleungdo-f3",
+    "name": "따개비밥·칡소 한우",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-typhoon",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "tongyeong",
+  "name": "통영",
+  "region": "domestic",
+  "country": "KR",
+  "continent": "asia",
+  "subregion": "korea",
+  "coord": {
+   "lat": 34.8544,
+   "lon": 128.4331
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 1.1,
+  "bestSeason": [
+   4,
+   5,
+   10
+  ],
+  "tags": [
+   "바다",
+   "섬",
+   "먹방"
+  ],
+  "recommendedDays": [
+   2,
+   3
+  ],
+  "transports": [
+   {
+    "mode": "bus",
+    "name": "서울→통영 고속버스",
+    "costRoundTrip": 56000,
+    "durationMin": 210,
+    "fatigue": 10,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "tongyeong-s1",
+    "name": "동피랑 벽화마을",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tongyeong-s2",
+    "name": "통영 케이블카·미륵산 정상",
+    "cost": 14000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tongyeong-s3",
+    "name": "이순신공원",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "역사",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tongyeong-s4",
+    "name": "소매물도 등대섬(탐방)",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "섬",
+     "자연"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "tongyeong-a1",
+    "name": "한려수도 유람선",
+    "cost": 20000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "바다",
+     "섬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tongyeong-a2",
+    "name": "통영 루지·스카이라인",
+    "cost": 45000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "액티비티"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "tongyeong-f1",
+    "name": "충무김밥",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tongyeong-f2",
+    "name": "통영 굴 정식·멍게비빔밥",
+    "cost": 18000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "tongyeong-f3",
+    "name": "꿀빵",
+    "cost": 6000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 65000
+ },
+ {
+  "id": "paris",
+  "name": "파리",
+  "region": "overseas",
+  "country": "FR",
+  "continent": "europe",
+  "subregion": "west-europe",
+  "coord": {
+   "lat": 48.8566,
+   "lon": 2.3522
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.6,
+  "bestSeason": [
+   4,
+   5,
+   6,
+   9
+  ],
+  "tags": [
+   "도시",
+   "역사",
+   "야경"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→파리 FSC",
+    "costRoundTrip": 1600000,
+    "durationMin": 860,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "paris-s1",
+    "name": "에펠탑 정상",
+    "cost": 44000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "뷰",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "paris-s2",
+    "name": "루브르 박물관",
+    "cost": 25000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "paris-s3",
+    "name": "개선문 전망",
+    "cost": 22000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "paris-s4",
+    "name": "몽마르트르·사크레쾨르",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "로컬",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "paris-a1",
+    "name": "센강 바토무슈 크루즈",
+    "cost": 20000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "paris-a2",
+    "name": "베르사유 궁전 패스포트",
+    "cost": 38000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 14,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "paris-f1",
+    "name": "크루아상·바게트 베이커리",
+    "cost": 8000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "paris-f2",
+    "name": "비스트로 코스 요리",
+    "cost": 50000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "paris-f3",
+    "name": "마카롱",
+    "cost": 15000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "london",
+  "name": "런던",
+  "region": "overseas",
+  "country": "GB",
+  "continent": "europe",
+  "subregion": "west-europe",
+  "coord": {
+   "lat": 51.5074,
+   "lon": -0.1278
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.4,
+  "bestSeason": [
+   5,
+   6,
+   7,
+   9
+  ],
+  "tags": [
+   "도시",
+   "역사",
+   "박물관"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→런던(히스로) FSC",
+    "costRoundTrip": 1500000,
+    "durationMin": 840,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "london-s1",
+    "name": "대영박물관",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "london-s2",
+    "name": "타워 오브 런던",
+    "cost": 60000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "london-s3",
+    "name": "런던 아이",
+    "cost": 50000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "london-s4",
+    "name": "웨스트민스터·빅벤 외관",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "도시",
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "london-a1",
+    "name": "해리 포터 워너브라더스 스튜디오 투어",
+    "cost": 95000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "체험",
+     "영화"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "london-a2",
+    "name": "템스강 크루즈",
+    "cost": 20000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "london-f1",
+    "name": "피시앤칩스",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "london-f2",
+    "name": "애프터눈 티",
+    "cost": 70000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "london-f3",
+    "name": "보로우 마켓 먹거리",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "rome",
+  "name": "로마",
+  "region": "overseas",
+  "country": "IT",
+  "continent": "europe",
+  "subregion": "south-europe",
+  "coord": {
+   "lat": 41.9028,
+   "lon": 12.4964
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 2.5,
+  "bestSeason": [
+   4,
+   5,
+   9,
+   10
+  ],
+  "tags": [
+   "역사",
+   "먹방",
+   "도시"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→로마 FSC",
+    "costRoundTrip": 1450000,
+    "durationMin": 790,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "rome-s1",
+    "name": "콜로세움·포로 로마노",
+    "cost": 25000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rome-s2",
+    "name": "바티칸 박물관·시스티나 성당",
+    "cost": 30000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rome-s3",
+    "name": "트레비 분수",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rome-s4",
+    "name": "판테온",
+    "cost": 7000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "rome-a1",
+    "name": "바티칸 가이드 투어",
+    "cost": 70000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "역사",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rome-a2",
+    "name": "파스타 만들기 쿠킹클래스",
+    "cost": 70000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "체험",
+     "먹방"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "rome-f1",
+    "name": "카르보나라",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rome-f2",
+    "name": "젤라또",
+    "cost": 5000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "rome-f3",
+    "name": "로마식 피자",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "barcelona",
+  "name": "바르셀로나",
+  "region": "overseas",
+  "country": "ES",
+  "continent": "europe",
+  "subregion": "south-europe",
+  "coord": {
+   "lat": 41.3874,
+   "lon": 2.1686
+  },
+  "wave": 1,
+  "priceLevel": 3,
+  "popularity": 2.4,
+  "bestSeason": [
+   5,
+   6,
+   9,
+   10
+  ],
+  "tags": [
+   "도시",
+   "건축",
+   "바다"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→바르셀로나 FSC",
+    "costRoundTrip": 1500000,
+    "durationMin": 870,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "barcelona-s1",
+    "name": "사그라다 파밀리아",
+    "cost": 45000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "건축",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "barcelona-s2",
+    "name": "구엘 공원",
+    "cost": 15000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "건축",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "barcelona-s3",
+    "name": "카사 바트요",
+    "cost": 50000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "건축"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "barcelona-s4",
+    "name": "람블라스 거리·보케리아 시장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬",
+     "먹방"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "barcelona-a1",
+    "name": "몬세라트 수도원 당일 투어",
+    "cost": 70000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 14,
+    "tags": [
+     "자연",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "barcelona-a2",
+    "name": "플라멩코 공연 관람",
+    "cost": 50000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "체험",
+     "야경"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "barcelona-f1",
+    "name": "타파스·핀초 투어",
+    "cost": 30000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "barcelona-f2",
+    "name": "해산물 빠에야",
+    "cost": 35000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "barcelona-f3",
+    "name": "츄러스와 초콜릿",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "interlaken",
+  "name": "인터라켄(융프라우)",
+  "region": "overseas",
+  "country": "CH",
+  "continent": "europe",
+  "subregion": "west-europe",
+  "coord": {
+   "lat": 46.6863,
+   "lon": 7.8632
+  },
+  "wave": 1,
+  "priceLevel": 5,
+  "popularity": 2.5,
+  "bestSeason": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "tags": [
+   "자연",
+   "뷰",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→취리히 FSC + 열차(인터라켄)",
+    "costRoundTrip": 1750000,
+    "durationMin": 840,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "interlaken-s1",
+    "name": "융프라우요흐 전망대",
+    "cost": 300000,
+    "slots": 1,
+    "points": 10,
+    "fatigue": 14,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "interlaken-s2",
+    "name": "하더쿨름 전망대",
+    "cost": 60000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "뷰",
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "interlaken-s3",
+    "name": "루체른 카펠교",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사",
+     "도시"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "interlaken-s4",
+    "name": "그린델발트 하이킹 코스",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "등산"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "interlaken-a1",
+    "name": "패러글라이딩(인터라켄)",
+    "cost": 250000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "액티비티",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "interlaken-a2",
+    "name": "툰 호수 유람선",
+    "cost": 70000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "interlaken-f1",
+    "name": "치즈 퐁뒤",
+    "cost": 60000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "interlaken-f2",
+    "name": "스위스 초콜릿",
+    "cost": 15000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "interlaken-f3",
+    "name": "뢰스티",
+    "cost": 30000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "prague",
+  "name": "프라하",
+  "region": "overseas",
+  "country": "CZ",
+  "continent": "europe",
+  "subregion": "central-europe",
+  "coord": {
+   "lat": 50.0755,
+   "lon": 14.4378
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 2.2,
+  "bestSeason": [
+   5,
+   6,
+   9,
+   12
+  ],
+  "tags": [
+   "역사",
+   "야경",
+   "도시"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→프라하 FSC",
+    "costRoundTrip": 1450000,
+    "durationMin": 700,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "prague-s1",
+    "name": "프라하 성",
+    "cost": 15000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "prague-s2",
+    "name": "카를교",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "prague-s3",
+    "name": "구시가 광장·천문시계탑",
+    "cost": 12000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "prague-s4",
+    "name": "페트린 전망대",
+    "cost": 6000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "prague-a1",
+    "name": "블타바강 크루즈",
+    "cost": 30000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "prague-a2",
+    "name": "체스키크룸로프 당일 투어",
+    "cost": 60000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "역사",
+     "뷰"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "prague-f1",
+    "name": "굴라시",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "prague-f2",
+    "name": "꼴레뇨(족발)",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "prague-f3",
+    "name": "트르델니크",
+    "cost": 5000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline",
+   "weather-rain"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "santorini",
+  "name": "산토리니",
+  "region": "overseas",
+  "country": "GR",
+  "continent": "europe",
+  "subregion": "south-europe",
+  "coord": {
+   "lat": 36.3932,
+   "lon": 25.4615
+  },
+  "wave": 1,
+  "priceLevel": 4,
+  "popularity": 2.4,
+  "bestSeason": [
+   5,
+   6,
+   9,
+   10
+  ],
+  "tags": [
+   "바다",
+   "뷰",
+   "휴양"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→아테네 FSC + 산토리니 국내선",
+    "costRoundTrip": 2000000,
+    "durationMin": 1100,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "santorini-s1",
+    "name": "이아 마을 일몰 포인트",
+    "cost": 0,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "뷰",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "santorini-s2",
+    "name": "피라 케이블카·구시가",
+    "cost": 8000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "santorini-s3",
+    "name": "아크로티리 유적",
+    "cost": 18000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "santorini-s4",
+    "name": "레드 비치",
+    "cost": 0,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 7,
+    "tags": [
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "santorini-a1",
+    "name": "카타마란 일몰 크루즈",
+    "cost": 130000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 14,
+    "tags": [
+     "바다",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "santorini-a2",
+    "name": "화산섬(네아 카메니) 보트 투어",
+    "cost": 60000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "바다",
+     "자연"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "santorini-f1",
+    "name": "그릭 샐러드",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "santorini-f2",
+    "name": "수블라키",
+    "cost": 20000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "santorini-f3",
+    "name": "와이너리 와인 테이스팅",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "reykjavik",
+  "name": "레이캬비크(아이슬란드)",
+  "region": "overseas",
+  "country": "IS",
+  "continent": "europe",
+  "subregion": "north-europe",
+  "coord": {
+   "lat": 64.1466,
+   "lon": -21.9426
+  },
+  "wave": 1,
+  "priceLevel": 5,
+  "popularity": 2.3,
+  "bestSeason": [
+   6,
+   7,
+   9,
+   10
+  ],
+  "tags": [
+   "자연",
+   "오로라",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→헬싱키 경유→케플라비크 FSC",
+    "costRoundTrip": 2100000,
+    "durationMin": 960,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "reykjavik-s1",
+    "name": "싱벨리르 국립공원",
+    "cost": 0,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "reykjavik-s2",
+    "name": "게이시르 간헐천",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "reykjavik-s3",
+    "name": "굴포스 폭포",
+    "cost": 0,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "reykjavik-s4",
+    "name": "할그림스키르캬 교회 탑",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "뷰",
+     "도시"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "reykjavik-a1",
+    "name": "블루 라군 온천",
+    "cost": 150000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "체험",
+     "자연"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "reykjavik-a2",
+    "name": "오로라 헌팅 투어",
+    "cost": 120000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 12,
+    "tags": [
+     "오로라",
+     "자연"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "reykjavik-f1",
+    "name": "핫도그(배이린)",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "reykjavik-f2",
+    "name": "양고기 수프",
+    "cost": 25000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "reykjavik-f3",
+    "name": "해산물 요리",
+    "cost": 60000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "weather-rain",
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 110000
+ },
+ {
+  "id": "cairo",
+  "name": "카이로",
+  "region": "overseas",
+  "country": "EG",
+  "continent": "africa",
+  "subregion": "north-africa",
+  "coord": {
+   "lat": 30.0444,
+   "lon": 31.2357
+  },
+  "wave": 1,
+  "priceLevel": 1,
+  "popularity": 2.1,
+  "bestSeason": [
+   10,
+   11,
+   3,
+   4
+  ],
+  "tags": [
+   "역사",
+   "사막",
+   "체험"
+  ],
+  "recommendedDays": [
+   3,
+   4
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→카이로 FSC(경유)",
+    "costRoundTrip": 1500000,
+    "durationMin": 960,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "cairo-s1",
+    "name": "기자 피라미드·스핑크스",
+    "cost": 20000,
+    "slots": 1,
+    "points": 10,
+    "fatigue": 12,
+    "tags": [
+     "역사",
+     "사막"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cairo-s2",
+    "name": "이집트 대박물관(GEM)",
+    "cost": 30000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cairo-s3",
+    "name": "칸 엘 칼릴리 시장",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cairo-s4",
+    "name": "살라딘 시타델",
+    "cost": 10000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "cairo-a1",
+    "name": "낙타·말 타고 피라미드 투어",
+    "cost": 30000,
+    "slots": 2,
+    "points": 8,
+    "fatigue": 13,
+    "tags": [
+     "체험",
+     "사막"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cairo-a2",
+    "name": "나일강 펠루카 선셋",
+    "cost": 20000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "야경",
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "cairo-f1",
+    "name": "코샤리",
+    "cost": 3000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cairo-f2",
+    "name": "훔무스·이집트 빵",
+    "cost": 8000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "cairo-f3",
+    "name": "양고기 케밥",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "marrakech",
+  "name": "마라케시",
+  "region": "overseas",
+  "country": "MA",
+  "continent": "africa",
+  "subregion": "north-africa",
+  "coord": {
+   "lat": 31.6295,
+   "lon": -7.9811
+  },
+  "wave": 1,
+  "priceLevel": 1,
+  "popularity": 2,
+  "bestSeason": [
+   3,
+   4,
+   10,
+   11
+  ],
+  "tags": [
+   "사막",
+   "로컬",
+   "체험"
+  ],
+  "recommendedDays": [
+   4,
+   5
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→파리 경유→마라케시 FSC",
+    "costRoundTrip": 2100000,
+    "durationMin": 1150,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "marrakech-s1",
+    "name": "자마 엘프나 광장",
+    "cost": 0,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "로컬",
+     "야경"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "marrakech-s2",
+    "name": "바히아 궁전",
+    "cost": 6000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "marrakech-s3",
+    "name": "마조렐 정원",
+    "cost": 12000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 9,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "marrakech-s4",
+    "name": "쿠투비아 모스크 외관",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "역사"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "marrakech-a1",
+    "name": "사하라 사막 투어(메르주가 2박)",
+    "cost": 200000,
+    "slots": 3,
+    "points": 10,
+    "fatigue": 18,
+    "tags": [
+     "사막",
+     "체험"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "marrakech-a2",
+    "name": "전통 하맘 체험",
+    "cost": 30000,
+    "slots": 2,
+    "points": 6,
+    "fatigue": 11,
+    "tags": [
+     "체험"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "marrakech-f1",
+    "name": "타진",
+    "cost": 15000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "marrakech-f2",
+    "name": "쿠스쿠스",
+    "cost": 12000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "marrakech-f3",
+    "name": "민트티와 모로칸 과자",
+    "cost": 3000,
+    "slots": 1,
+    "points": 5,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  }
+ },
+ {
+  "id": "capetown",
+  "name": "케이프타운",
+  "region": "overseas",
+  "country": "ZA",
+  "continent": "africa",
+  "subregion": "south-africa",
+  "coord": {
+   "lat": -33.9249,
+   "lon": 18.4241
+  },
+  "wave": 1,
+  "priceLevel": 2,
+  "popularity": 2.2,
+  "bestSeason": [
+   11,
+   12,
+   1,
+   2,
+   3
+  ],
+  "tags": [
+   "자연",
+   "바다",
+   "액티비티"
+  ],
+  "recommendedDays": [
+   5,
+   6
+  ],
+  "transports": [
+   {
+    "mode": "fsc",
+    "name": "인천→케이프타운 FSC(경유)",
+    "costRoundTrip": 2300000,
+    "durationMin": 1320,
+    "fatigue": 22,
+    "videoBonus": 0,
+    "estimated": true,
+    "sourceNote": "일반 시세 기반 추정(2026-10, 공식 확인 전)"
+   }
+  ],
+  "sights": [
+   {
+    "id": "capetown-s1",
+    "name": "테이블 마운틴 케이블카",
+    "cost": 33000,
+    "slots": 1,
+    "points": 9,
+    "fatigue": 11,
+    "tags": [
+     "자연",
+     "뷰"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "capetown-s2",
+    "name": "희망봉 국립공원",
+    "cost": 15000,
+    "slots": 1,
+    "points": 8,
+    "fatigue": 10,
+    "tags": [
+     "자연",
+     "바다"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "capetown-s3",
+    "name": "보캅 컬러풀 마을",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "capetown-s4",
+    "name": "V&A 워터프론트",
+    "cost": 0,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 8,
+    "tags": [
+     "도시",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "activities": [
+   {
+    "id": "capetown-a1",
+    "name": "스텔렌보쉬 와이너리 투어",
+    "cost": 70000,
+    "slots": 2,
+    "points": 7,
+    "fatigue": 12,
+    "tags": [
+     "체험",
+     "먹방"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "capetown-a2",
+    "name": "그란스바이 샤크 케이지 다이빙",
+    "cost": 200000,
+    "slots": 2,
+    "points": 9,
+    "fatigue": 16,
+    "tags": [
+     "액티비티",
+     "바다"
+    ],
+    "estimated": true
+   }
+  ],
+  "foods": [
+   {
+    "id": "capetown-f1",
+    "name": "브라이(남아공식 바비큐)",
+    "cost": 25000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "capetown-f2",
+    "name": "케이프 말레이 커리",
+    "cost": 15000,
+    "slots": 1,
+    "points": 6,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   },
+   {
+    "id": "capetown-f3",
+    "name": "신선 해산물",
+    "cost": 40000,
+    "slots": 1,
+    "points": 7,
+    "fatigue": 3,
+    "tags": [
+     "먹방",
+     "로컬"
+    ],
+    "estimated": true
+   }
+  ],
+  "lodging": {
+   "guesthouse": 40000,
+   "business": 80000,
+   "hotel": 180000
+  },
+  "events": [
+   "strike-airline"
+  ],
+  "sourceNote": {
+   "basis": "작성자 지식 기반 초안(2026-10). 요금·입장료 공식 확인 전 → estimated",
+   "asOf": "2026-10"
+  },
+  "rentalDayCost": 60000
+ }
+]

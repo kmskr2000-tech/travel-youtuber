@@ -5,13 +5,26 @@ import { newState } from '../src/state.js';
 import { resolveTrip, previewTrip, rest, rollSponsor, acceptSponsor, trainSkill } from '../src/engine/game.js';
 import { repay, availableCredit } from '../src/engine/economy.js';
 import { staminaCap, soloMult } from '../src/engine/burnout.js';
-import { FIXTURES } from './fixtures.mjs';
+import { FIXTURES as FX } from './fixtures.mjs';
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const N = +arg('--n', 200), MAXV = +arg('--max', 400);
 const bal = JSON.parse(readFileSync(arg('--bal', new URL('../data/balance.json', import.meta.url)), 'utf8'));
 // --set a.b=val (반복 가능) 으로 balance 일부를 덮어써 스윕
 process.argv.forEach((a, i) => { if (a === '--set') { const [k, v] = process.argv[i + 1].split('='); const ks = k.split('.'); let o = bal; ks.slice(0, -1).forEach((x) => (o = o[x])); o[ks.at(-1)] = JSON.parse(v); } });
+// --data 이면 data/destinations.json 실데이터 사용. 가상 원형 id는 실데이터 목록으로 매핑
+const USE_DATA = process.argv.includes('--data');
+const REAL = USE_DATA ? JSON.parse(readFileSync(new URL('../data/destinations.json', import.meta.url), 'utf8')) : null;
+const FIXTURES = USE_DATA ? REAL : FX;
+const ALIAS = USE_DATA ? (() => {
+  const dom = REAL.filter((d) => d.region === 'domestic').map((d) => d.id), ov = REAL.filter((d) => d.region === 'overseas');
+  const near = ['tokyo', 'osaka', 'taipei', 'guam'], sea = ['bangkok', 'danang', 'bali', 'singapore'];
+  const longs = ov.filter((d) => !near.includes(d.id) && !sea.includes(d.id));
+  const by = (c) => longs.filter((d) => d.continent === c).map((d) => d.id);
+  return { 'dom-ktx': dom.filter((x) => !['jeju', 'ulleungdo'].includes(x)), 'dom-jeju': ['jeju'], 'asia-near': near, 'asia-sea': sea,
+    'oce-long': by('oceania'), 'eu-long': [...by('europe'), ...by('asia')], 'am-long': [...by('north_america'), ...by('south_america')], 'afr-long': by('africa') };
+})() : null;
+const expand = (ids) => (ALIAS ? ids.flatMap((i) => ALIAS[i] ?? [i]) : ids);
 const events = JSON.parse(readFileSync(new URL('../data/events.json', import.meta.url), 'utf8'));
 const data = { events, trends: [{ tag: '자연', months: [4, 5, 9, 10], multiplier: 1.15 }] };
 
@@ -71,7 +84,7 @@ function run(policyName, seed) {
     if (s.cash > 400000 * s.shootLv && s.shootLv < 6 && policyName === 'scaler') s = trainSkill(s, 'shoot', bal);
     const budget = s.cash + availableCredit(s, bal);
     // 후보 여행지를 섞어 실행 가능한 첫 일정을 채택 (불가능하면 다음 후보)
-    const order = [...p.dests]; for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rng.next() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    const order = [...expand(p.dests)]; for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rng.next() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
     let plan = null, dest = null;
     for (const destId of order) {
       const dd = FIXTURES.find((f) => f.id === destId);
